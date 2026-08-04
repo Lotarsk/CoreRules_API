@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['d_202nd_20edition_20data_20layer_0',['Core Rules — AD&amp;amp;D 2nd Edition Data Layer',['../index.html',1,'']]],
+  ['dat_1',['The full character record (per-character .dat)',['../data_character.html#autotoc_md12',1,'']]],
+  ['dat_20—_20character_20classes_2',['Class.dat — Character classes',['../data_class.html',1,'datafiles']]],
+  ['dat_20—_20character_20races_3',['Race.dat — Character races',['../data_race.html',1,'datafiles']]],
+  ['dat_20—_20class_20allowances_20by_20race_4',['Allowed.dat — Class allowances by race',['../data_allowed.html',1,'datafiles']]],
+  ['dat_20—_20encounter_20templates_5',['EncPlat.dat — Encounter templates',['../data_encplat.html',1,'datafiles']]],
+  ['dat_20—_20monster_20attack_20forms_6',['Attack.dat — Monster attack forms',['../data_attack.html',1,'datafiles']]],
+  ['dat_20—_20monster_20types_7',['MonType.dat — Monster types',['../data_montype.html',1,'datafiles']]],
+  ['dat_20—_20name_20conversion_20table_8',['Convert.dat — Name conversion table',['../data_convert.html',1,'datafiles']]],
+  ['dat_20—_20parts_20data_20file_9',['Parts.dat — Parts data file',['../data_parts.html',1,'datafiles']]],
+  ['dat_20—_20pre_20built_20encounters_10',['Encount.dat — Pre-built encounters',['../data_encount.html',1,'datafiles']]],
+  ['dat_20—_20psionic_20powers_11',['Psionic.dat — Psionic powers',['../data_psionic.html',1,'datafiles']]],
+  ['dat_20—_20random_20encounter_20frequency_20tables_12',['EncTab.dat — Random-encounter frequency tables',['../data_enctab.html',1,'datafiles']]],
+  ['dat_20—_20random_20treasure_20tables_13',['Treasure.dat — Random treasure tables',['../data_treasure.html',1,'datafiles']]],
+  ['dat_20—_20the_20bestiary_14',['Monster.dat — The bestiary',['../data_monster.html',1,'datafiles']]],
+  ['dat_20—_20trap_20definitions_15',['Traps.dat — Trap definitions',['../data_traps.html',1,'datafiles']]],
+  ['dat_20—_20treasure_20bundles_16',['TreaBun.dat — Treasure bundles',['../data_treabun.html',1,'datafiles']]],
+  ['dat_20—_20wizard_20and_20priest_20spells_17',['Spells.dat — Wizard and priest spells',['../data_spells.html',1,'datafiles']]],
+  ['data_20file_18',['Parts.dat — Parts data file',['../data_parts.html',1,'datafiles']]],
+  ['data_20files_19',['Data Files',['../datafiles.html',1,'']]],
+  ['data_20in_20this_20file_20includes_20',['Data in this file includes',['../data_allowed.html#autotoc_md8',1,'Data in this file includes'],['../data_attack.html#autotoc_md9',1,'Data in this file includes'],['../data_character.html#autotoc_md10',1,'Data in this file includes'],['../data_class.html#autotoc_md13',1,'Data in this file includes'],['../data_convert.html#autotoc_md14',1,'Data in this file includes'],['../data_encount.html#autotoc_md15',1,'Data in this file includes'],['../data_encplat.html#autotoc_md16',1,'Data in this file includes'],['../data_enctab.html#autotoc_md17',1,'Data in this file includes'],['../data_monster.html#autotoc_md18',1,'Data in this file includes'],['../data_montype.html#autotoc_md19',1,'Data in this file includes'],['../data_parts.html#autotoc_md21',1,'Data in this file includes'],['../data_psionic.html#autotoc_md22',1,'Data in this file includes'],['../data_race.html#autotoc_md23',1,'Data in this file includes'],['../data_spells.html#autotoc_md24',1,'Data in this file includes'],['../data_traps.html#autotoc_md25',1,'Data in this file includes'],['../data_treabun.html#autotoc_md26',1,'Data in this file includes'],['../data_treasure.html#autotoc_md27',1,'Data in this file includes']]],
+  ['data_20layer_21',['Core Rules — AD&amp;amp;D 2nd Edition Data Layer',['../index.html',1,'']]],
+  ['definitions_22',['Traps.dat — Trap definitions',['../data_traps.html',1,'datafiles']]]
+];

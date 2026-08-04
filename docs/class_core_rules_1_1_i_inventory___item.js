@@ -1,0 +1,25 @@
+var class_core_rules_1_1_i_inventory___item =
+[
+    [ "~IInventory_Item", "class_core_rules_1_1_i_inventory___item.html#a953e0cdb0921c3c5ec926cf1231317a3", null ],
+    [ "AddSpell", "class_core_rules_1_1_i_inventory___item.html#a065beb4cab4b61c4d5ff8fffc1b40e17", null ],
+    [ "ClearSpells", "class_core_rules_1_1_i_inventory___item.html#a69b73e73f45c82d59e4799c6fca337d7", null ],
+    [ "Clone", "class_core_rules_1_1_i_inventory___item.html#a55fb77c4b0185c08c9267c06c6140603", null ],
+    [ "GetContents", "class_core_rules_1_1_i_inventory___item.html#a25882dd688e11a3203d0b55cd009a5b8", null ],
+    [ "GetContents", "class_core_rules_1_1_i_inventory___item.html#a7dd8e10a4661e53434e43c4010ea0197", null ],
+    [ "GetCount", "class_core_rules_1_1_i_inventory___item.html#abba29636563a5b26efad8b8b56294ec8", null ],
+    [ "GetItemName", "class_core_rules_1_1_i_inventory___item.html#a5d79f78e8e26aededc7f4d59ca9dc2c4", null ],
+    [ "GetPages", "class_core_rules_1_1_i_inventory___item.html#afaa462ec60925e38525489216865f22f", null ],
+    [ "GetPagesUsed", "class_core_rules_1_1_i_inventory___item.html#ad1e2664ac67fa2a5411a9863ff5e3372", null ],
+    [ "GetSpellCount", "class_core_rules_1_1_i_inventory___item.html#a6b85f348a8bc9a8585ab6f26e1b65322", null ],
+    [ "GetSpellName", "class_core_rules_1_1_i_inventory___item.html#a817cc816a71e234b73d3b76951785f6e", null ],
+    [ "GetSpellPagesUsed", "class_core_rules_1_1_i_inventory___item.html#a374f58bef555e6d69f62c9db11e11542", null ],
+    [ "GetSpellType", "class_core_rules_1_1_i_inventory___item.html#a395489f88dd02a244c8b31ab93f3e11c", null ],
+    [ "IsDirty", "class_core_rules_1_1_i_inventory___item.html#a3a6edef3412391e279d6ec1ea2dea1a4", null ],
+    [ "IsSpellBook", "class_core_rules_1_1_i_inventory___item.html#a69a4426bc41f54176a7df5b5da925f08", null ],
+    [ "IsSpellBook", "class_core_rules_1_1_i_inventory___item.html#a4b125bbb82ba65f2c1e2e2e860776e05", null ],
+    [ "MarkClean", "class_core_rules_1_1_i_inventory___item.html#a9a6556a8e141d9949bf7d0dfa329b909", null ],
+    [ "RemoveSpell", "class_core_rules_1_1_i_inventory___item.html#af2b94adc1ea465576680a51e161954c9", null ],
+    [ "SetCount", "class_core_rules_1_1_i_inventory___item.html#af14856a19ef5dbd5414926ed4dd6d356", null ],
+    [ "SetItemName", "class_core_rules_1_1_i_inventory___item.html#a3ed482ae78f2e01dca86401dd6cb1cc4", null ],
+    [ "SetPages", "class_core_rules_1_1_i_inventory___item.html#a076e9bbf6663f16a1ac841135d326341", null ]
+];
