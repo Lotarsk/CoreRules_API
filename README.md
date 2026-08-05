@@ -1,4 +1,4 @@
-# Core Rules — AD&D 2nd Edition Data Layer {#mainpage}
+# Core Rules — AD&D 2nd Edition Data Layer
 
 This library, **Core Rules**, is a modern C++ re-implementation of the data model
 that underpinned TSR / Wizards of the Coast's *Advanced Dungeons & Dragons
