@@ -133,6 +133,9 @@ Public Types</h2></td></tr>
 , <a class="el" href="#ac9b435d93e24ac5d188e3ac1ebaa6d99a72dd3675bf4348b83fd7f8c9e0be9cff">Player_CoreRulesV3</a> = 256
  }</td></tr>
 <tr class="memdesc:ac9b435d93e24ac5d188e3ac1ebaa6d99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Player-type discriminator (<span class="tt">Type</span> field on the General tab).  <a href="#ac9b435d93e24ac5d188e3ac1ebaa6d99">More...</a><br /></td></tr>
+<tr class="memitem:a682047494924f5f80993822368ffce48" id="r_a682047494924f5f80993822368ffce48"><td class="memItemLeft">enum &#160;</td><td class="memItemRight">{ <a class="el" href="#a682047494924f5f80993822368ffce48a2140b51ad67e4ba8b59a0c36fe6abaf7">kMaxLevel</a> = 100
+ }</td></tr>
+<tr class="memdesc:a682047494924f5f80993822368ffce48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum character level the HP-per-level array supports.  <a href="#a682047494924f5f80993822368ffce48">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -231,6 +234,42 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a3860ba983f413a4489f7891c7f0b6c83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove (and delete) the adventure at the given index.  <br /></td></tr>
 <tr class="memitem:a773d0458e776a0eee0fe3fa56f255c02" id="r_a773d0458e776a0eee0fe3fa56f255c02"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a773d0458e776a0eee0fe3fa56f255c02">ClearAdventures</a> ()=0</td></tr>
 <tr class="memdesc:a773d0458e776a0eee0fe3fa56f255c02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove and delete every adventure.  <br /></td></tr>
+<tr class="memitem:a8a9c684d72d6c7955900846a50c25adc" id="r_a8a9c684d72d6c7955900846a50c25adc"><td class="memItemLeft">virtual long&#160;</td><td class="memItemRight"><a class="el" href="#a8a9c684d72d6c7955900846a50c25adc">GetExperiencePoints</a> (int slot) const =0</td></tr>
+<tr class="memdesc:a8a9c684d72d6c7955900846a50c25adc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Experience points in the given class slot.  <br /></td></tr>
+<tr class="memitem:a841f4e371402caa3fff7d65702229888" id="r_a841f4e371402caa3fff7d65702229888"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a841f4e371402caa3fff7d65702229888">SetExperiencePoints</a> (int slot, long xp)=0</td></tr>
+<tr class="memdesc:a841f4e371402caa3fff7d65702229888"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set XP for the given class slot.  <br /></td></tr>
+<tr class="memitem:adaae6055b89b528c2909221cd4792429" id="r_adaae6055b89b528c2909221cd4792429"><td class="memItemLeft">virtual long&#160;</td><td class="memItemRight"><a class="el" href="#adaae6055b89b528c2909221cd4792429">GetHPForLevel</a> (int slot, int level) const =0</td></tr>
+<tr class="memdesc:adaae6055b89b528c2909221cd4792429"><td class="mdescLeft">&#160;</td><td class="mdescRight">Per-character-level HP rolled for the given class slot.  <br /></td></tr>
+<tr class="memitem:a336f0fc8b885b889df086665246f3c1a" id="r_a336f0fc8b885b889df086665246f3c1a"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a336f0fc8b885b889df086665246f3c1a">SetHPForLevel</a> (int slot, int level, long hp)=0</td></tr>
+<tr class="memdesc:a336f0fc8b885b889df086665246f3c1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set rolled HP for the given class slot + level.  <br /></td></tr>
+<tr class="memitem:a0bde23116b24380d9ec58b287dce9467" id="r_a0bde23116b24380d9ec58b287dce9467"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a0bde23116b24380d9ec58b287dce9467">IsShieldBuckler</a> () const =0</td></tr>
+<tr class="memdesc:a0bde23116b24380d9ec58b287dce9467"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shield-Buckler proficiency.  <br /></td></tr>
+<tr class="memitem:aa1f148eaee732dc8fb439f345cba9cc3" id="r_aa1f148eaee732dc8fb439f345cba9cc3"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#aa1f148eaee732dc8fb439f345cba9cc3">IsShieldSmall</a> () const =0</td></tr>
+<tr class="memdesc:aa1f148eaee732dc8fb439f345cba9cc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shield-Small proficiency.  <br /></td></tr>
+<tr class="memitem:ac6700024225cd6683d154ba57fcf15ac" id="r_ac6700024225cd6683d154ba57fcf15ac"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#ac6700024225cd6683d154ba57fcf15ac">IsShieldMedium</a> () const =0</td></tr>
+<tr class="memdesc:ac6700024225cd6683d154ba57fcf15ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shield-Medium proficiency.  <br /></td></tr>
+<tr class="memitem:ae55cc2247f12495cddf6e3acb42f1e10" id="r_ae55cc2247f12495cddf6e3acb42f1e10"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#ae55cc2247f12495cddf6e3acb42f1e10">IsShieldBody</a> () const =0</td></tr>
+<tr class="memdesc:ae55cc2247f12495cddf6e3acb42f1e10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shield-Body proficiency.  <br /></td></tr>
+<tr class="memitem:aba422d6d8de28bf63365290cf5c7915b" id="r_aba422d6d8de28bf63365290cf5c7915b"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aba422d6d8de28bf63365290cf5c7915b">IsShieldBuckler</a> (bool v)=0</td></tr>
+<tr class="memdesc:aba422d6d8de28bf63365290cf5c7915b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Shield-Buckler proficiency.  <br /></td></tr>
+<tr class="memitem:a8b2e8eb23d25ce0b60a5de31c5d8adf6" id="r_a8b2e8eb23d25ce0b60a5de31c5d8adf6"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a8b2e8eb23d25ce0b60a5de31c5d8adf6">IsShieldSmall</a> (bool v)=0</td></tr>
+<tr class="memdesc:a8b2e8eb23d25ce0b60a5de31c5d8adf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Shield-Small proficiency.  <br /></td></tr>
+<tr class="memitem:a65fdef66e0bb23e205a8f861b9230f14" id="r_a65fdef66e0bb23e205a8f861b9230f14"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a65fdef66e0bb23e205a8f861b9230f14">IsShieldMedium</a> (bool v)=0</td></tr>
+<tr class="memdesc:a65fdef66e0bb23e205a8f861b9230f14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Shield-Medium proficiency.  <br /></td></tr>
+<tr class="memitem:aa77af4a8139b50e8f00099eaa821ae92" id="r_aa77af4a8139b50e8f00099eaa821ae92"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aa77af4a8139b50e8f00099eaa821ae92">IsShieldBody</a> (bool v)=0</td></tr>
+<tr class="memdesc:aa77af4a8139b50e8f00099eaa821ae92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Shield-Body proficiency.  <br /></td></tr>
+<tr class="memitem:a4471a4d2a109eed1dec1021925b99fbf" id="r_a4471a4d2a109eed1dec1021925b99fbf"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a4471a4d2a109eed1dec1021925b99fbf">IsCanPunch</a> () const =0</td></tr>
+<tr class="memdesc:a4471a4d2a109eed1dec1021925b99fbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unarmed combat: punching.  <br /></td></tr>
+<tr class="memitem:a09172e1de607742784af6823fc1f5508" id="r_a09172e1de607742784af6823fc1f5508"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a09172e1de607742784af6823fc1f5508">IsCanWrestle</a> () const =0</td></tr>
+<tr class="memdesc:a09172e1de607742784af6823fc1f5508"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unarmed combat: wrestling.  <br /></td></tr>
+<tr class="memitem:aa6bf94dd45f5062562a0656130701ada" id="r_aa6bf94dd45f5062562a0656130701ada"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#aa6bf94dd45f5062562a0656130701ada">IsCanMartialArts</a> () const =0</td></tr>
+<tr class="memdesc:aa6bf94dd45f5062562a0656130701ada"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unarmed combat: martial arts.  <br /></td></tr>
+<tr class="memitem:a2205bd6c93efe0a6afe5f71e78e36959" id="r_a2205bd6c93efe0a6afe5f71e78e36959"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a2205bd6c93efe0a6afe5f71e78e36959">IsCanPunch</a> (bool v)=0</td></tr>
+<tr class="memdesc:a2205bd6c93efe0a6afe5f71e78e36959"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set punching ability.  <br /></td></tr>
+<tr class="memitem:ab13b547eedfac8d1c1fe64ba224063f0" id="r_ab13b547eedfac8d1c1fe64ba224063f0"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ab13b547eedfac8d1c1fe64ba224063f0">IsCanWrestle</a> (bool v)=0</td></tr>
+<tr class="memdesc:ab13b547eedfac8d1c1fe64ba224063f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set wrestling ability.  <br /></td></tr>
+<tr class="memitem:af5dd472235e5590e02aad072d21ab407" id="r_af5dd472235e5590e02aad072d21ab407"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#af5dd472235e5590e02aad072d21ab407">IsCanMartialArts</a> (bool v)=0</td></tr>
+<tr class="memdesc:af5dd472235e5590e02aad072d21ab407"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set martial-arts ability.  <br /></td></tr>
 <tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Extension-backed fields</div></td></tr>
 <tr><td colspan="2" class="ititle"><div class="groupText"><p>Fields stored on the per-character <span class="tt">Drakein.dat record</span>.</p>
 <dl class="section user"><dt>Mutual exclusion (family link vs. local DOB / place-of-birth)</dt><dd><ul>
@@ -288,7 +327,43 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2a424cc81c78d4efdf206b287846f3c5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><span class="tt">true</span> if the character is no longer in play.  <br /></td></tr>
 <tr class="memitem:acb1821ba90a541d7c3dde6b398476d91" id="r_acb1821ba90a541d7c3dde6b398476d91"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#acb1821ba90a541d7c3dde6b398476d91">OutOfPlay</a> (bool v)=0</td></tr>
 <tr class="memdesc:acb1821ba90a541d7c3dde6b398476d91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set if the character is no longer in play.  <br /></td></tr>
-<tr id="pub-methods-1" class="groupHeader"><td colspan="2"><div class="groupHeader">Tab: Abilities</div></td></tr>
+<tr id="pub-methods-1" class="groupHeader"><td colspan="2"><div class="groupHeader">Per-slot class lists: abilities, magic schools, minor/major spheres</div></td></tr>
+<tr><td colspan="2" class="ititle"><div class="groupText"><p>Standard string-array CRUD (like racial abilities / traits / disadvantages) but per class slot [0, kMaxClasses).</p>
+<p>Each Add validates the value against the matching Parts section (Class Abilities / Schools of Magic / Spheres); an unknown value is rejected. A bad slot yields count 0 / "" / false. </p>
+</div></td></tr>
+<tr class="memitem:aced6ba3a0d5b1e5af47dd290ad28e6dd" id="r_aced6ba3a0d5b1e5af47dd290ad28e6dd"><td class="memItemLeft">virtual int&#160;</td><td class="memItemRight"><a class="el" href="#aced6ba3a0d5b1e5af47dd290ad28e6dd">GetClassAbilityCount</a> (int slot) const =0</td></tr>
+<tr class="memitem:a94b114e73221cd3a730111aab24e6ac5" id="r_a94b114e73221cd3a730111aab24e6ac5"><td class="memItemLeft">virtual const char *&#160;</td><td class="memItemRight"><a class="el" href="#a94b114e73221cd3a730111aab24e6ac5">GetClassAbility</a> (int slot, int index) const =0</td></tr>
+<tr class="memitem:ad442f6aae770b7696685907e48193789" id="r_ad442f6aae770b7696685907e48193789"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#ad442f6aae770b7696685907e48193789">AddClassAbility</a> (int slot, const char *v)=0</td></tr>
+<tr class="memitem:ae03fc94f6772797d897edb0c4c9d5585" id="r_ae03fc94f6772797d897edb0c4c9d5585"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#ae03fc94f6772797d897edb0c4c9d5585">RemoveClassAbility</a> (int slot, const char *v)=0</td></tr>
+<tr class="memdesc:ae03fc94f6772797d897edb0c4c9d5585"><td class="mdescLeft">&#160;</td><td class="mdescRight">by name (removes all matches); false if none  <br /></td></tr>
+<tr class="memitem:abe14b039befe818ee17c3013e1ce7c16" id="r_abe14b039befe818ee17c3013e1ce7c16"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#abe14b039befe818ee17c3013e1ce7c16">RemoveClassAbilityAt</a> (int slot, int index)=0</td></tr>
+<tr class="memdesc:abe14b039befe818ee17c3013e1ce7c16"><td class="mdescLeft">&#160;</td><td class="mdescRight">by index  <br /></td></tr>
+<tr class="memitem:a8351168abc89149962daae4ab13421e0" id="r_a8351168abc89149962daae4ab13421e0"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a8351168abc89149962daae4ab13421e0">ClearClassAbilities</a> (int slot)=0</td></tr>
+<tr class="memitem:a1adef540d78ccfaf53439b2708730c3d" id="r_a1adef540d78ccfaf53439b2708730c3d"><td class="memItemLeft">virtual int&#160;</td><td class="memItemRight"><a class="el" href="#a1adef540d78ccfaf53439b2708730c3d">GetMagicSchoolCount</a> (int slot) const =0</td></tr>
+<tr class="memitem:abedf8b631c05a0e2241e5b47537f82dc" id="r_abedf8b631c05a0e2241e5b47537f82dc"><td class="memItemLeft">virtual const char *&#160;</td><td class="memItemRight"><a class="el" href="#abedf8b631c05a0e2241e5b47537f82dc">GetMagicSchool</a> (int slot, int index) const =0</td></tr>
+<tr class="memitem:a9d6cb2967fe186d3efa896652d05458c" id="r_a9d6cb2967fe186d3efa896652d05458c"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a9d6cb2967fe186d3efa896652d05458c">AddMagicSchool</a> (int slot, const char *v)=0</td></tr>
+<tr class="memitem:a187c5a837f3f2ed724a380c71cf1f265" id="r_a187c5a837f3f2ed724a380c71cf1f265"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a187c5a837f3f2ed724a380c71cf1f265">RemoveMagicSchool</a> (int slot, const char *v)=0</td></tr>
+<tr class="memdesc:a187c5a837f3f2ed724a380c71cf1f265"><td class="mdescLeft">&#160;</td><td class="mdescRight">by name  <br /></td></tr>
+<tr class="memitem:a514aa01c835d95412e6e61ecc51f6dc8" id="r_a514aa01c835d95412e6e61ecc51f6dc8"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a514aa01c835d95412e6e61ecc51f6dc8">RemoveMagicSchoolAt</a> (int slot, int index)=0</td></tr>
+<tr class="memdesc:a514aa01c835d95412e6e61ecc51f6dc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">by index  <br /></td></tr>
+<tr class="memitem:aa5a6abecf850a81f24d8c822a76a5153" id="r_aa5a6abecf850a81f24d8c822a76a5153"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aa5a6abecf850a81f24d8c822a76a5153">ClearMagicSchools</a> (int slot)=0</td></tr>
+<tr class="memitem:a73ce56b952cf53cc02d31eec53f8dfcc" id="r_a73ce56b952cf53cc02d31eec53f8dfcc"><td class="memItemLeft">virtual int&#160;</td><td class="memItemRight"><a class="el" href="#a73ce56b952cf53cc02d31eec53f8dfcc">GetMinorSphereCount</a> (int slot) const =0</td></tr>
+<tr class="memitem:abf16de15cb99cf69d21004919dbaa295" id="r_abf16de15cb99cf69d21004919dbaa295"><td class="memItemLeft">virtual const char *&#160;</td><td class="memItemRight"><a class="el" href="#abf16de15cb99cf69d21004919dbaa295">GetMinorSphere</a> (int slot, int index) const =0</td></tr>
+<tr class="memitem:a59d54bbd6c2f51bb5d29e975479b13d2" id="r_a59d54bbd6c2f51bb5d29e975479b13d2"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a59d54bbd6c2f51bb5d29e975479b13d2">AddMinorSphere</a> (int slot, const char *v)=0</td></tr>
+<tr class="memitem:a466dd819c1409464762a95dab7031561" id="r_a466dd819c1409464762a95dab7031561"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a466dd819c1409464762a95dab7031561">RemoveMinorSphere</a> (int slot, const char *v)=0</td></tr>
+<tr class="memdesc:a466dd819c1409464762a95dab7031561"><td class="mdescLeft">&#160;</td><td class="mdescRight">by name  <br /></td></tr>
+<tr class="memitem:aa3e2bbd145ca8fa65d500c23f2083251" id="r_aa3e2bbd145ca8fa65d500c23f2083251"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#aa3e2bbd145ca8fa65d500c23f2083251">RemoveMinorSphereAt</a> (int slot, int index)=0</td></tr>
+<tr class="memdesc:aa3e2bbd145ca8fa65d500c23f2083251"><td class="mdescLeft">&#160;</td><td class="mdescRight">by index  <br /></td></tr>
+<tr class="memitem:af7b7ed9b440196b32ac0b3927a6af8b7" id="r_af7b7ed9b440196b32ac0b3927a6af8b7"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#af7b7ed9b440196b32ac0b3927a6af8b7">ClearMinorSpheres</a> (int slot)=0</td></tr>
+<tr class="memitem:ac84c039cf701b82ecbab4643291bb06d" id="r_ac84c039cf701b82ecbab4643291bb06d"><td class="memItemLeft">virtual int&#160;</td><td class="memItemRight"><a class="el" href="#ac84c039cf701b82ecbab4643291bb06d">GetMajorSphereCount</a> (int slot) const =0</td></tr>
+<tr class="memitem:a5d6cce02379c01adf2398ebdbd613ad0" id="r_a5d6cce02379c01adf2398ebdbd613ad0"><td class="memItemLeft">virtual const char *&#160;</td><td class="memItemRight"><a class="el" href="#a5d6cce02379c01adf2398ebdbd613ad0">GetMajorSphere</a> (int slot, int index) const =0</td></tr>
+<tr class="memitem:a6efa0e39a3541d894204fb7c09a684c8" id="r_a6efa0e39a3541d894204fb7c09a684c8"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a6efa0e39a3541d894204fb7c09a684c8">AddMajorSphere</a> (int slot, const char *v)=0</td></tr>
+<tr class="memitem:a6a87713ca63c7d823529c3182c4a1836" id="r_a6a87713ca63c7d823529c3182c4a1836"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a6a87713ca63c7d823529c3182c4a1836">RemoveMajorSphere</a> (int slot, const char *v)=0</td></tr>
+<tr class="memdesc:a6a87713ca63c7d823529c3182c4a1836"><td class="mdescLeft">&#160;</td><td class="mdescRight">by name  <br /></td></tr>
+<tr class="memitem:a520a536e551137b3df16acac3963f9bd" id="r_a520a536e551137b3df16acac3963f9bd"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a520a536e551137b3df16acac3963f9bd">RemoveMajorSphereAt</a> (int slot, int index)=0</td></tr>
+<tr class="memdesc:a520a536e551137b3df16acac3963f9bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">by index  <br /></td></tr>
+<tr class="memitem:a951f2ae939aa944fc1a33818effd93aa" id="r_a951f2ae939aa944fc1a33818effd93aa"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a951f2ae939aa944fc1a33818effd93aa">ClearMajorSpheres</a> (int slot)=0</td></tr>
+<tr id="pub-methods-2" class="groupHeader"><td colspan="2"><div class="groupHeader">Tab: Abilities</div></td></tr>
 <tr><td colspan="2" class="ititle"><div class="groupText"><p>Racial abilities list.</p>
 <p>Class / kit abilities are pulled from their respective catalogs at display time (not stored here). </p>
 </div></td></tr>
@@ -298,11 +373,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a973ca1a48a3f4a4317c0a7ffe73546ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Racial ability at the given index.  <br /></td></tr>
 <tr class="memitem:a6ad3d5d0bf3c24bae35062eeb58b971b" id="r_a6ad3d5d0bf3c24bae35062eeb58b971b"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a6ad3d5d0bf3c24bae35062eeb58b971b">AddRacialAbility</a> (const char *v)=0</td></tr>
 <tr class="memdesc:a6ad3d5d0bf3c24bae35062eeb58b971b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a racial ability.  <br /></td></tr>
+<tr class="memitem:aa7bab663d679875d53ef297a308ed901" id="r_aa7bab663d679875d53ef297a308ed901"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#aa7bab663d679875d53ef297a308ed901">RemoveRacialAbility</a> (const char *v)=0</td></tr>
+<tr class="memdesc:aa7bab663d679875d53ef297a308ed901"><td class="mdescLeft">&#160;</td><td class="mdescRight">by name  <br /></td></tr>
 <tr class="memitem:a1c8dee5f74b1bf19370b2b4ff95cce45" id="r_a1c8dee5f74b1bf19370b2b4ff95cce45"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a1c8dee5f74b1bf19370b2b4ff95cce45">RemoveRacialAbilityAt</a> (int index)=0</td></tr>
 <tr class="memdesc:a1c8dee5f74b1bf19370b2b4ff95cce45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the racial ability at the given index.  <br /></td></tr>
 <tr class="memitem:abd508ea2a3d2dec72629bc3360f933e0" id="r_abd508ea2a3d2dec72629bc3360f933e0"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#abd508ea2a3d2dec72629bc3360f933e0">ClearRacialAbilities</a> ()=0</td></tr>
 <tr class="memdesc:abd508ea2a3d2dec72629bc3360f933e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove every racial ability.  <br /></td></tr>
-<tr id="pub-methods-2" class="groupHeader"><td colspan="2"><div class="groupHeader">Tab: Proficiencies (Non-Weapon)</div></td></tr>
+<tr id="pub-methods-3" class="groupHeader"><td colspan="2"><div class="groupHeader">Character points (Skills &amp; Powers class build)</div></td></tr>
+<tr><td colspan="2" class="ititle"><div class="groupText"><p>Total S&amp;P character points for the build, and the amount awarded per level.</p>
+<p>An S&amp;P <em>class</em> value (not psionics). Setters reject negative values. </p>
+</div></td></tr>
+<tr class="memitem:aa65e68f24d3941c93ab8e707f5b39b73" id="r_aa65e68f24d3941c93ab8e707f5b39b73"><td class="memItemLeft">virtual long&#160;</td><td class="memItemRight"><a class="el" href="#aa65e68f24d3941c93ab8e707f5b39b73">GetCharacterPoints</a> () const =0</td></tr>
+<tr class="memitem:a15e486199090944f94b8c161702bc362" id="r_a15e486199090944f94b8c161702bc362"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a15e486199090944f94b8c161702bc362">SetCharacterPoints</a> (long v)=0</td></tr>
+<tr class="memitem:a6db0696bb8895ccda4791973bed6f135" id="r_a6db0696bb8895ccda4791973bed6f135"><td class="memItemLeft">virtual long&#160;</td><td class="memItemRight"><a class="el" href="#a6db0696bb8895ccda4791973bed6f135">GetCharacterPointsPerLevel</a> () const =0</td></tr>
+<tr class="memitem:a9b42fb006eab3fb73af2b37128b5239e" id="r_a9b42fb006eab3fb73af2b37128b5239e"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a9b42fb006eab3fb73af2b37128b5239e">SetCharacterPointsPerLevel</a> (long v)=0</td></tr>
+<tr id="pub-methods-4" class="groupHeader"><td colspan="2"><div class="groupHeader">Tab: Proficiencies (Non-Weapon)</div></td></tr>
 <tr><td colspan="2" class="ititle"><div class="groupText"><p>Non-weapon proficiencies, languages, secondary skills, armor worn. </p>
 </div></td></tr>
 <tr class="memitem:a41cd8fd93b28351369bac889bbcd633b" id="r_a41cd8fd93b28351369bac889bbcd633b"><td class="memItemLeft">virtual int&#160;</td><td class="memItemRight"><a class="el" href="#a41cd8fd93b28351369bac889bbcd633b">GetNonWeaponProfCount</a> () const =0</td></tr>
@@ -311,6 +396,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:acfdfc838568e54ecdb7531711c436056"><td class="mdescLeft">&#160;</td><td class="mdescRight">NWP at index.  <br /></td></tr>
 <tr class="memitem:adaf91f7fd4283a1f586eaa1264eb9b83" id="r_adaf91f7fd4283a1f586eaa1264eb9b83"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#adaf91f7fd4283a1f586eaa1264eb9b83">AddNonWeaponProf</a> (const char *v)=0</td></tr>
 <tr class="memdesc:adaf91f7fd4283a1f586eaa1264eb9b83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a non-weapon proficiency.  <br /></td></tr>
+<tr class="memitem:ad41ef31cabe0bedd31f625eed27647a1" id="r_ad41ef31cabe0bedd31f625eed27647a1"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#ad41ef31cabe0bedd31f625eed27647a1">RemoveNonWeaponProf</a> (const char *v)=0</td></tr>
+<tr class="memdesc:ad41ef31cabe0bedd31f625eed27647a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">by name  <br /></td></tr>
 <tr class="memitem:a45aaafec7282e4a72adba66b98c395d0" id="r_a45aaafec7282e4a72adba66b98c395d0"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a45aaafec7282e4a72adba66b98c395d0">RemoveNonWeaponProfAt</a> (int index)=0</td></tr>
 <tr class="memdesc:a45aaafec7282e4a72adba66b98c395d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove at index.  <br /></td></tr>
 <tr class="memitem:ae88981370c7bf9bdce8c8fba18e79873" id="r_ae88981370c7bf9bdce8c8fba18e79873"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ae88981370c7bf9bdce8c8fba18e79873">ClearNonWeaponProfs</a> ()=0</td></tr>
@@ -341,6 +428,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ac445e59b095ee8fed76c91054567f50d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Secondary skill at index.  <br /></td></tr>
 <tr class="memitem:a66fc661a58eae3dd7b46d4bf41216486" id="r_a66fc661a58eae3dd7b46d4bf41216486"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a66fc661a58eae3dd7b46d4bf41216486">AddSecondarySkill</a> (const char *v)=0</td></tr>
 <tr class="memdesc:a66fc661a58eae3dd7b46d4bf41216486"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a secondary skill.  <br /></td></tr>
+<tr class="memitem:a25d81bc723737cea8769cb0e4470f900" id="r_a25d81bc723737cea8769cb0e4470f900"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a25d81bc723737cea8769cb0e4470f900">RemoveSecondarySkill</a> (const char *v)=0</td></tr>
+<tr class="memdesc:a25d81bc723737cea8769cb0e4470f900"><td class="mdescLeft">&#160;</td><td class="mdescRight">by name  <br /></td></tr>
 <tr class="memitem:a2aa0c3641424b3704763e217c224782d" id="r_a2aa0c3641424b3704763e217c224782d"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a2aa0c3641424b3704763e217c224782d">RemoveSecondarySkillAt</a> (int index)=0</td></tr>
 <tr class="memdesc:a2aa0c3641424b3704763e217c224782d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove at index.  <br /></td></tr>
 <tr class="memitem:a40c407e63eb6a6621456e155af9d2463" id="r_a40c407e63eb6a6621456e155af9d2463"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a40c407e63eb6a6621456e155af9d2463">ClearSecondarySkills</a> ()=0</td></tr>
@@ -351,6 +440,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a1aa951254b4b933cc1146e2071b6c5cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Language at index.  <br /></td></tr>
 <tr class="memitem:aa4c0698f321eeee3237fd3ffadce576c" id="r_aa4c0698f321eeee3237fd3ffadce576c"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#aa4c0698f321eeee3237fd3ffadce576c">AddLanguage</a> (const char *v)=0</td></tr>
 <tr class="memdesc:aa4c0698f321eeee3237fd3ffadce576c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a language.  <br /></td></tr>
+<tr class="memitem:afdaeab3c53dda256f6aa0fdf40e240f7" id="r_afdaeab3c53dda256f6aa0fdf40e240f7"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#afdaeab3c53dda256f6aa0fdf40e240f7">RemoveLanguage</a> (const char *v)=0</td></tr>
+<tr class="memdesc:afdaeab3c53dda256f6aa0fdf40e240f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">by name  <br /></td></tr>
 <tr class="memitem:a892c9d1b44d3d43588331feaafd1daeb" id="r_a892c9d1b44d3d43588331feaafd1daeb"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a892c9d1b44d3d43588331feaafd1daeb">RemoveLanguageAt</a> (int index)=0</td></tr>
 <tr class="memdesc:a892c9d1b44d3d43588331feaafd1daeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove language at index.  <br /></td></tr>
 <tr class="memitem:afb0de907003a7212c21bbdae73436e73" id="r_afb0de907003a7212c21bbdae73436e73"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#afb0de907003a7212c21bbdae73436e73">ClearLanguages</a> ()=0</td></tr>
@@ -361,6 +452,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a49c9ce5cb45e481fb836bf0e74cbc0fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Worn armor item at index.  <br /></td></tr>
 <tr class="memitem:ad62b567e1d6232c90ee1cfd6e8eef89b" id="r_ad62b567e1d6232c90ee1cfd6e8eef89b"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#ad62b567e1d6232c90ee1cfd6e8eef89b">AddArmorWorn</a> (const char *v)=0</td></tr>
 <tr class="memdesc:ad62b567e1d6232c90ee1cfd6e8eef89b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a worn armor item.  <br /></td></tr>
+<tr class="memitem:a2e756188eb7e1400e8ae592925f2ecfd" id="r_a2e756188eb7e1400e8ae592925f2ecfd"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a2e756188eb7e1400e8ae592925f2ecfd">RemoveArmorWorn</a> (const char *v)=0</td></tr>
+<tr class="memdesc:a2e756188eb7e1400e8ae592925f2ecfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">by name  <br /></td></tr>
 <tr class="memitem:abf38ef97d790b30d3507f3a87def86ec" id="r_abf38ef97d790b30d3507f3a87def86ec"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#abf38ef97d790b30d3507f3a87def86ec">RemoveArmorWornAt</a> (int index)=0</td></tr>
 <tr class="memdesc:abf38ef97d790b30d3507f3a87def86ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove worn armor item at index.  <br /></td></tr>
 <tr class="memitem:a85f40298ec29437b934d551e52d3d23d" id="r_a85f40298ec29437b934d551e52d3d23d"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a85f40298ec29437b934d551e52d3d23d">ClearArmorWorn</a> ()=0</td></tr>
@@ -369,7 +462,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2d14764a308500aaf47bc445ec0e04a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free NWP grants from the character's kit (single concatenated string).  <br /></td></tr>
 <tr class="memitem:acb0bb12a648a802606edddaceb0e6f6e" id="r_acb0bb12a648a802606edddaceb0e6f6e"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#acb0bb12a648a802606edddaceb0e6f6e">SetFreeNWPByKit</a> (const char *v)=0</td></tr>
 <tr class="memdesc:acb0bb12a648a802606edddaceb0e6f6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the free-NWP-by-kit string.  <br /></td></tr>
-<tr id="pub-methods-3" class="groupHeader"><td colspan="2"><div class="groupHeader">Tab: History</div></td></tr>
+<tr id="pub-methods-5" class="groupHeader"><td colspan="2"><div class="groupHeader">Tab: History</div></td></tr>
 <tr><td colspan="2" class="ititle"><div class="groupText"><p>Free-form prose: Social Standing, History, Major Life Event. </p>
 </div></td></tr>
 <tr class="memitem:a24fe77932b409970c30abb8f11ed2698" id="r_a24fe77932b409970c30abb8f11ed2698"><td class="memItemLeft">virtual const char *&#160;</td><td class="memItemRight"><a class="el" href="#a24fe77932b409970c30abb8f11ed2698">GetSocialStanding</a> () const =0</td></tr>
@@ -384,25 +477,29 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ad5a9731bf8a5fec39a041ff105aafdfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Major Life Event prose field.  <br /></td></tr>
 <tr class="memitem:a30edef20cfccfeaaec2e4b442d019e92" id="r_a30edef20cfccfeaaec2e4b442d019e92"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a30edef20cfccfeaaec2e4b442d019e92">SetMajorLifeEvent</a> (const char *v)=0</td></tr>
 <tr class="memdesc:a30edef20cfccfeaaec2e4b442d019e92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Major Life Event.  <br /></td></tr>
-<tr id="pub-methods-4" class="groupHeader"><td colspan="2"><div class="groupHeader">Tab: General (edit API for Traits / Disadvantages)</div></td></tr>
+<tr id="pub-methods-6" class="groupHeader"><td colspan="2"><div class="groupHeader">Tab: General (edit API for Traits / Disadvantages)</div></td></tr>
 <tr><td colspan="2" class="ititle"><div class="groupText"><p>The read-only stubs in the General block (above) provide <span class="tt">Count +
 GetXxx(int)</span>; these complete the editing protocol used by the General tab's "Traits" and "Disadvantages" panes. </p>
 </div></td></tr>
 <tr class="memitem:a8fbf623deb6f9cdfd9e292cab6bcd61c" id="r_a8fbf623deb6f9cdfd9e292cab6bcd61c"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a8fbf623deb6f9cdfd9e292cab6bcd61c">AddTrait</a> (const char *v)=0</td></tr>
 <tr class="memdesc:a8fbf623deb6f9cdfd9e292cab6bcd61c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a trait to the General-tab Traits pane.  <br /></td></tr>
+<tr class="memitem:a1b9451fecf5a60a128d2ea9c84f34712" id="r_a1b9451fecf5a60a128d2ea9c84f34712"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a1b9451fecf5a60a128d2ea9c84f34712">RemoveTrait</a> (const char *v)=0</td></tr>
+<tr class="memdesc:a1b9451fecf5a60a128d2ea9c84f34712"><td class="mdescLeft">&#160;</td><td class="mdescRight">by name  <br /></td></tr>
 <tr class="memitem:a5896d17c674ffbec25515562b1be95ff" id="r_a5896d17c674ffbec25515562b1be95ff"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a5896d17c674ffbec25515562b1be95ff">RemoveTraitAt</a> (int index)=0</td></tr>
 <tr class="memdesc:a5896d17c674ffbec25515562b1be95ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove trait at index.  <br /></td></tr>
 <tr class="memitem:a393a7e2599ed74c40befb4c81480f212" id="r_a393a7e2599ed74c40befb4c81480f212"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a393a7e2599ed74c40befb4c81480f212">ClearTraits</a> ()=0</td></tr>
 <tr class="memdesc:a393a7e2599ed74c40befb4c81480f212"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all traits.  <br /></td></tr>
 <tr class="memitem:a36fe264f73d0f0009b260fee1cebc5f1" id="r_a36fe264f73d0f0009b260fee1cebc5f1"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a36fe264f73d0f0009b260fee1cebc5f1">AddDisadvantage</a> (const char *v)=0</td></tr>
 <tr class="memdesc:a36fe264f73d0f0009b260fee1cebc5f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a disadvantage to the General-tab Disadvantages pane.  <br /></td></tr>
+<tr class="memitem:a97a6a617bbcd4e20896236a1072c23a3" id="r_a97a6a617bbcd4e20896236a1072c23a3"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a97a6a617bbcd4e20896236a1072c23a3">RemoveDisadvantage</a> (const char *v)=0</td></tr>
+<tr class="memdesc:a97a6a617bbcd4e20896236a1072c23a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">by name  <br /></td></tr>
 <tr class="memitem:a86803c09a11a41b7f51f005dc0028fa7" id="r_a86803c09a11a41b7f51f005dc0028fa7"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a86803c09a11a41b7f51f005dc0028fa7">RemoveDisadvantageAt</a> (int index)=0</td></tr>
 <tr class="memdesc:a86803c09a11a41b7f51f005dc0028fa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove disadvantage at index.  <br /></td></tr>
 <tr class="memitem:a38364ba90161b0fd344b0f0ed1a20819" id="r_a38364ba90161b0fd344b0f0ed1a20819"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a38364ba90161b0fd344b0f0ed1a20819">ClearDisadvantages</a> ()=0</td></tr>
 <tr class="memdesc:a38364ba90161b0fd344b0f0ed1a20819"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all disadvantages.  <br /></td></tr>
-<tr id="pub-methods-5" class="groupHeader"><td colspan="2"><div class="groupHeader">Composite dirty-flag protocol</div></td></tr>
+<tr id="pub-methods-7" class="groupHeader"><td colspan="2"><div class="groupHeader">Composite dirty-flag protocol</div></td></tr>
 <tr><td colspan="2" class="ititle"><div class="groupText"><dl class="section user"><dt>Tab: deferred &ndash; Psionics</dt><dd></dd></dl>
-<p>The Psionics tab is not in the current editor screenshot set. The impl carries the full Psionics data block (Primary Psionics and Alternate Primary strings; Disciplines / Sciences / Devotions / Attacks / Defenses lists; <span class="tt">IsTestedForWildTalent</span> flag; PSP- per-level array; CharacterPoints + per-level). These accessors will be added here when the Psionics editor lands.</p>
+<p>The Psionics tab is not in the current editor screenshot set. The impl carries the full Psionics data block (Primary Psionics and Alternate Primary strings; Disciplines / Sciences / Devotions / Attacks / Defenses lists; <span class="tt">IsTestedForWildTalent</span> flag; PSP- per-level array). These accessors will be added here when the Psionics editor lands. (Character Points + per-level were previously mis-listed here; they are an S&amp;P class-build value, not psionics, and are now exposed via GetCharacterPoints / GetCharacterPointsPerLevel above.)</p>
 <p>DEFERRED 2026-06-02 by Jeff. Not an oversight &ndash; the underlying impl is intact; just no public interface yet because there's no consumer for it. </p>
 </div></td></tr>
 <tr class="memitem:a4a0e78f383bf09926e6720d9e3d904ff" id="r_a4a0e78f383bf09926e6720d9e3d904ff"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a4a0e78f383bf09926e6720d9e3d904ff">IsDirty</a> () const =0</td></tr>
@@ -529,25 +626,31 @@ Tab: Class</h2></td></tr>
 <tr class="memitem:a1ed17b1b045456b38d42fb9a0abbdb33" id="r_a1ed17b1b045456b38d42fb9a0abbdb33"><td class="memItemLeft">enum &#160;</td><td class="memItemRight">{ <a class="el" href="#a1ed17b1b045456b38d42fb9a0abbdb33aa4077fd5aa93e3c6a6539958ef57645a">kMaxClasses</a> = 5
  }</td></tr>
 <tr class="memdesc:a1ed17b1b045456b38d42fb9a0abbdb33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of multi-class slots. Valid slot indices are <span class="tt">[0, <a class="el" href="#a1ed17b1b045456b38d42fb9a0abbdb33aa4077fd5aa93e3c6a6539958ef57645a">kMaxClasses</a>)</span>.  <a href="#a1ed17b1b045456b38d42fb9a0abbdb33">More...</a><br /></td></tr>
-<tr class="memitem:a682047494924f5f80993822368ffce48" id="r_a682047494924f5f80993822368ffce48"><td class="memItemLeft">enum &#160;</td><td class="memItemRight">{ <a class="el" href="#a682047494924f5f80993822368ffce48a2140b51ad67e4ba8b59a0c36fe6abaf7">kMaxLevel</a> = 100
+<tr class="memitem:a02a7411465ed69526dc9df7edf885946" id="r_a02a7411465ed69526dc9df7edf885946"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a02a7411465ed69526dc9df7edf885946">AddClassResult</a> { <br />
+&#160;&#160;<a class="el" href="#a02a7411465ed69526dc9df7edf885946a95dc30a2e6ffd46c953a44ade26795eb">Added</a>
+, <a class="el" href="#a02a7411465ed69526dc9df7edf885946ac5ef9334859172f57b64a79050f5d92d">ReplacedSameGroup</a>
+, <a class="el" href="#a02a7411465ed69526dc9df7edf885946afed0f3a868115213acd2c295c996eee3">AlreadyPresent</a>
+, <a class="el" href="#a02a7411465ed69526dc9df7edf885946ad34800f0434c0dfd4d90f5ecb03d41b6">NotAClass</a>
+, <br />
+&#160;&#160;<a class="el" href="#a02a7411465ed69526dc9df7edf885946addc82e7fae350691a86ad7bcb20ded88">Full</a>
+<br />
  }</td></tr>
-<tr class="memdesc:a682047494924f5f80993822368ffce48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum character level the HP-per-level array supports.  <a href="#a682047494924f5f80993822368ffce48">More...</a><br /></td></tr>
+<tr class="memdesc:a02a7411465ed69526dc9df7edf885946"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outcome of AddClass.  <a href="#a02a7411465ed69526dc9df7edf885946">More...</a><br /></td></tr>
+<tr class="memitem:a661dd7114e453c450458b2e7abcf7f4a" id="r_a661dd7114e453c450458b2e7abcf7f4a"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a661dd7114e453c450458b2e7abcf7f4a">RemoveClassResult</a> { <a class="el" href="#a661dd7114e453c450458b2e7abcf7f4aa849da5e9c565faceb74412e90daf0ab0">Removed</a>
+, <a class="el" href="#a661dd7114e453c450458b2e7abcf7f4aa813384b2cb8b066fad31e3d694ebca0e">NotFound</a>
+, <a class="el" href="#a661dd7114e453c450458b2e7abcf7f4aa80e1f6cc3d411014d54eb255f3057e75">CannotRemoveLast</a>
+ }</td></tr>
+<tr class="memdesc:a661dd7114e453c450458b2e7abcf7f4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outcome of RemoveClass.  <a href="#a661dd7114e453c450458b2e7abcf7f4a">More...</a><br /></td></tr>
 <tr class="memitem:a5858683cefd03ead84ddd05dd56b080c" id="r_a5858683cefd03ead84ddd05dd56b080c"><td class="memItemLeft">virtual long&#160;</td><td class="memItemRight"><a class="el" href="#a5858683cefd03ead84ddd05dd56b080c">GetNumberOfClasses</a> () const =0</td></tr>
-<tr class="memdesc:a5858683cefd03ead84ddd05dd56b080c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Active class count (1..3 typical; 0..kMaxClasses).  <br /></td></tr>
-<tr class="memitem:aa9261cd00153c5244bc5a8a69d8e9f90" id="r_aa9261cd00153c5244bc5a8a69d8e9f90"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#aa9261cd00153c5244bc5a8a69d8e9f90">SetNumberOfClasses</a> (long v)=0</td></tr>
-<tr class="memdesc:aa9261cd00153c5244bc5a8a69d8e9f90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set active class count.  <br /></td></tr>
+<tr class="memdesc:a5858683cefd03ead84ddd05dd56b080c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Active class count.  <br /></td></tr>
 <tr class="memitem:a46f8baa763dc08ba5235bbe43f875273" id="r_a46f8baa763dc08ba5235bbe43f875273"><td class="memItemLeft">virtual const char *&#160;</td><td class="memItemRight"><a class="el" href="#a46f8baa763dc08ba5235bbe43f875273">GetSlotClassName</a> (int slot) const =0</td></tr>
 <tr class="memdesc:a46f8baa763dc08ba5235bbe43f875273"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class name at the given slot (<span class="tt">""</span> if out of range).  <br /></td></tr>
-<tr class="memitem:a732aebb4797d9414042179b50ba857e4" id="r_a732aebb4797d9414042179b50ba857e4"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a732aebb4797d9414042179b50ba857e4">SetSlotClassName</a> (int slot, const char *v)=0</td></tr>
-<tr class="memdesc:a732aebb4797d9414042179b50ba857e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set class name at the given slot.  <br /></td></tr>
-<tr class="memitem:a8a9c684d72d6c7955900846a50c25adc" id="r_a8a9c684d72d6c7955900846a50c25adc"><td class="memItemLeft">virtual long&#160;</td><td class="memItemRight"><a class="el" href="#a8a9c684d72d6c7955900846a50c25adc">GetExperiencePoints</a> (int slot) const =0</td></tr>
-<tr class="memdesc:a8a9c684d72d6c7955900846a50c25adc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Experience points in the given class slot.  <br /></td></tr>
-<tr class="memitem:a841f4e371402caa3fff7d65702229888" id="r_a841f4e371402caa3fff7d65702229888"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a841f4e371402caa3fff7d65702229888">SetExperiencePoints</a> (int slot, long xp)=0</td></tr>
-<tr class="memdesc:a841f4e371402caa3fff7d65702229888"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set XP for the given class slot.  <br /></td></tr>
-<tr class="memitem:adaae6055b89b528c2909221cd4792429" id="r_adaae6055b89b528c2909221cd4792429"><td class="memItemLeft">virtual long&#160;</td><td class="memItemRight"><a class="el" href="#adaae6055b89b528c2909221cd4792429">GetHPForLevel</a> (int slot, int level) const =0</td></tr>
-<tr class="memdesc:adaae6055b89b528c2909221cd4792429"><td class="mdescLeft">&#160;</td><td class="mdescRight">Per-character-level HP rolled for the given class slot.  <br /></td></tr>
-<tr class="memitem:a336f0fc8b885b889df086665246f3c1a" id="r_a336f0fc8b885b889df086665246f3c1a"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a336f0fc8b885b889df086665246f3c1a">SetHPForLevel</a> (int slot, int level, long hp)=0</td></tr>
-<tr class="memdesc:a336f0fc8b885b889df086665246f3c1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set rolled HP for the given class slot + level.  <br /></td></tr>
+<tr class="memitem:a0bf6ea7af3b5e47e23a33beedd93a2bd" id="r_a0bf6ea7af3b5e47e23a33beedd93a2bd"><td class="memItemLeft">virtual int&#160;</td><td class="memItemRight"><a class="el" href="#a0bf6ea7af3b5e47e23a33beedd93a2bd">FindClassSlot</a> (const char *class_name) const =0</td></tr>
+<tr class="memdesc:a0bf6ea7af3b5e47e23a33beedd93a2bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slot index holding the named class (case-insensitive), or -1 if the character has no such class.  <br /></td></tr>
+<tr class="memitem:a3bf2a1a7a81fca29cab90359c047c668" id="r_a3bf2a1a7a81fca29cab90359c047c668"><td class="memItemLeft">virtual <a class="el" href="#a02a7411465ed69526dc9df7edf885946">AddClassResult</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3bf2a1a7a81fca29cab90359c047c668">AddClass</a> (const char *name)=0</td></tr>
+<tr class="memdesc:a3bf2a1a7a81fca29cab90359c047c668"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a class by name.  <br /></td></tr>
+<tr class="memitem:a1feb316bf282849c6204b063243a26d8" id="r_a1feb316bf282849c6204b063243a26d8"><td class="memItemLeft">virtual <a class="el" href="#a661dd7114e453c450458b2e7abcf7f4a">RemoveClassResult</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1feb316bf282849c6204b063243a26d8">RemoveClass</a> (const char *name)=0</td></tr>
+<tr class="memdesc:a1feb316bf282849c6204b063243a26d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a class by name; compacts the roster (and every per-slot array) and decrements the count.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-member-group" class="groupheader"><a id="member-group" name="member-group"></a>
 Tab: Proficiencies (Weapon)</h2></td></tr>
@@ -556,12 +659,30 @@ Tab: Proficiencies (Weapon)</h2></td></tr>
 <tr class="memitem:a72451865d645f916284af18fe76c75aa" id="r_a72451865d645f916284af18fe76c75aa"><td class="memItemLeft">enum &#160;</td><td class="memItemRight">{ <a class="el" href="#a72451865d645f916284af18fe76c75aaa3ec6b8e8838d4c006ab942f900176199">kFightingStyleSlots</a> = 9
  }</td></tr>
 <tr class="memdesc:a72451865d645f916284af18fe76c75aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of S&amp;P fighting-style slots (9 fixed slots).  <a href="#a72451865d645f916284af18fe76c75aa">More...</a><br /></td></tr>
+<tr class="memitem:a79033043f5532ede8577dec69560a72a" id="r_a79033043f5532ede8577dec69560a72a"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a79033043f5532ede8577dec69560a72a">FightingStyle</a> { <br />
+&#160;&#160;<a class="el" href="#a79033043f5532ede8577dec69560a72aa16a59d75ea706c64aabd1b09fd4e7e56">FStyle_None</a> = 0
+, <a class="el" href="#a79033043f5532ede8577dec69560a72aa3aaa2383bbbba3fee13672ec5089f3c6">FStyle_OneHandedWeapon</a> = 0x7C9
+, <a class="el" href="#a79033043f5532ede8577dec69560a72aa2e994211298ac1d3840a7bbdd46d80a4">FStyle_WeaponAndShield</a> = 0x7CA
+, <a class="el" href="#a79033043f5532ede8577dec69560a72aa9d8f5743613e637ae79a911075b12dfb">FStyle_TwoHandedWeapon</a> = 0x7CB
+, <br />
+&#160;&#160;<a class="el" href="#a79033043f5532ede8577dec69560a72aa3265d5579a7dc2f555a44844e8696d89">FStyle_TwoWeapon</a> = 0x7CC
+, <a class="el" href="#a79033043f5532ede8577dec69560a72aa4a738af3da25029a8053e1a2c1115c72">FStyle_Missile</a> = 0x7CD
+, <a class="el" href="#a79033043f5532ede8577dec69560a72aa86fd45edc95a03c2c033bd283f7e618d">FStyle_HorseArcher</a> = 0x7CE
+, <a class="el" href="#a79033043f5532ede8577dec69560a72aaf2bb13660b63fbeb88b311477025d19f">FStyle_ThrownSling</a> = 0x7CF
+, <br />
+&#160;&#160;<a class="el" href="#a79033043f5532ede8577dec69560a72aa4395014d79462d8908fc05c3e958e4d4">FStyle_TwoWeaponPlus2</a> = 0x7D1
+, <a class="el" href="#a79033043f5532ede8577dec69560a72aa55d14a5e3a23baf6aaec76f1786221be">FStyle_OneHandedPlus2</a> = 0x7D2
+<br />
+ }</td></tr>
+<tr class="memdesc:a79033043f5532ede8577dec69560a72a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Skills &amp; Powers fighting-style keys.  <a href="#a79033043f5532ede8577dec69560a72a">More...</a><br /></td></tr>
 <tr class="memitem:adb2af13e6fb1a4d92a5339133da0984e" id="r_adb2af13e6fb1a4d92a5339133da0984e"><td class="memItemLeft">virtual int&#160;</td><td class="memItemRight"><a class="el" href="#adb2af13e6fb1a4d92a5339133da0984e">GetWeaponProficiencyCount</a> () const =0</td></tr>
 <tr class="memdesc:adb2af13e6fb1a4d92a5339133da0984e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of specific-weapon proficiencies (e.g. "Sword, long").  <br /></td></tr>
 <tr class="memitem:a18dc6d9d998481dcef08d2633469c662" id="r_a18dc6d9d998481dcef08d2633469c662"><td class="memItemLeft">virtual const char *&#160;</td><td class="memItemRight"><a class="el" href="#a18dc6d9d998481dcef08d2633469c662">GetWeaponProficiency</a> (int index) const =0</td></tr>
 <tr class="memdesc:a18dc6d9d998481dcef08d2633469c662"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specific-weapon proficiency at the given index.  <br /></td></tr>
 <tr class="memitem:af973960ddf1f332cfd332bf26a799ac1" id="r_af973960ddf1f332cfd332bf26a799ac1"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#af973960ddf1f332cfd332bf26a799ac1">AddWeaponProficiency</a> (const char *v)=0</td></tr>
 <tr class="memdesc:af973960ddf1f332cfd332bf26a799ac1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a weapon proficiency.  <br /></td></tr>
+<tr class="memitem:aeed2174757e09b8611be6d25fac5c05d" id="r_aeed2174757e09b8611be6d25fac5c05d"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#aeed2174757e09b8611be6d25fac5c05d">RemoveWeaponProficiency</a> (const char *v)=0</td></tr>
+<tr class="memdesc:aeed2174757e09b8611be6d25fac5c05d"><td class="mdescLeft">&#160;</td><td class="mdescRight">by name  <br /></td></tr>
 <tr class="memitem:a5882c098e6f435a6ff84823c9d980462" id="r_a5882c098e6f435a6ff84823c9d980462"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a5882c098e6f435a6ff84823c9d980462">RemoveWeaponProficiencyAt</a> (int index)=0</td></tr>
 <tr class="memdesc:a5882c098e6f435a6ff84823c9d980462"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the weapon proficiency at the given index.  <br /></td></tr>
 <tr class="memitem:ab0792c4abf1f4d27627ae65879fa03c4" id="r_ab0792c4abf1f4d27627ae65879fa03c4"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ab0792c4abf1f4d27627ae65879fa03c4">ClearWeaponProficiency</a> ()=0</td></tr>
@@ -572,6 +693,8 @@ Tab: Proficiencies (Weapon)</h2></td></tr>
 <tr class="memdesc:a806fead5290db096137002d2925f0a78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Broad-group proficiency at index.  <br /></td></tr>
 <tr class="memitem:a2c3c8f7e0a0a499ce5e235ee1a91f072" id="r_a2c3c8f7e0a0a499ce5e235ee1a91f072"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a2c3c8f7e0a0a499ce5e235ee1a91f072">AddBroadGroupProficiency</a> (const char *v)=0</td></tr>
 <tr class="memdesc:a2c3c8f7e0a0a499ce5e235ee1a91f072"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a broad-group proficiency.  <br /></td></tr>
+<tr class="memitem:a55b8dcd0d62f9886a32d0e2658cd4f6e" id="r_a55b8dcd0d62f9886a32d0e2658cd4f6e"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a55b8dcd0d62f9886a32d0e2658cd4f6e">RemoveBroadGroupProficiency</a> (const char *v)=0</td></tr>
+<tr class="memdesc:a55b8dcd0d62f9886a32d0e2658cd4f6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">by name  <br /></td></tr>
 <tr class="memitem:ae1c6071256b51a2c889777a446a71f92" id="r_ae1c6071256b51a2c889777a446a71f92"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#ae1c6071256b51a2c889777a446a71f92">RemoveBroadGroupProficiencyAt</a> (int index)=0</td></tr>
 <tr class="memdesc:ae1c6071256b51a2c889777a446a71f92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove at index.  <br /></td></tr>
 <tr class="memitem:a617fd318d68ae6fdc60f17c2ee050943" id="r_a617fd318d68ae6fdc60f17c2ee050943"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a617fd318d68ae6fdc60f17c2ee050943">ClearBroadGroupProficiency</a> ()=0</td></tr>
@@ -582,6 +705,8 @@ Tab: Proficiencies (Weapon)</h2></td></tr>
 <tr class="memdesc:a16cad5dd0bd57f70dd1f6d312392f520"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tight-group proficiency at index.  <br /></td></tr>
 <tr class="memitem:a0c30f24cecb50fd279fd069f49ebe02f" id="r_a0c30f24cecb50fd279fd069f49ebe02f"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a0c30f24cecb50fd279fd069f49ebe02f">AddTightGroupProficiency</a> (const char *v)=0</td></tr>
 <tr class="memdesc:a0c30f24cecb50fd279fd069f49ebe02f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a tight-group proficiency.  <br /></td></tr>
+<tr class="memitem:a94e8f24c4123b320ea785e756fcc0334" id="r_a94e8f24c4123b320ea785e756fcc0334"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a94e8f24c4123b320ea785e756fcc0334">RemoveTightGroupProficiency</a> (const char *v)=0</td></tr>
+<tr class="memdesc:a94e8f24c4123b320ea785e756fcc0334"><td class="mdescLeft">&#160;</td><td class="mdescRight">by name  <br /></td></tr>
 <tr class="memitem:ab46fbc47970b21641d53ba68e9286a45" id="r_ab46fbc47970b21641d53ba68e9286a45"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#ab46fbc47970b21641d53ba68e9286a45">RemoveTightGroupProficiencyAt</a> (int index)=0</td></tr>
 <tr class="memdesc:ab46fbc47970b21641d53ba68e9286a45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove at index.  <br /></td></tr>
 <tr class="memitem:a17b48e10b91c3300d03f044c27aef86d" id="r_a17b48e10b91c3300d03f044c27aef86d"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a17b48e10b91c3300d03f044c27aef86d">ClearTightGroupProficiency</a> ()=0</td></tr>
@@ -592,6 +717,8 @@ Tab: Proficiencies (Weapon)</h2></td></tr>
 <tr class="memdesc:ad46cfc88093b5d7a3493ec915330dcb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization at index.  <br /></td></tr>
 <tr class="memitem:a7c0e904d1e0e70e24e18ab7cd0489b09" id="r_a7c0e904d1e0e70e24e18ab7cd0489b09"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a7c0e904d1e0e70e24e18ab7cd0489b09">AddSpecialization</a> (const char *v)=0</td></tr>
 <tr class="memdesc:a7c0e904d1e0e70e24e18ab7cd0489b09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a specialization.  <br /></td></tr>
+<tr class="memitem:a6dee6495476593b1132a1420a4a56e15" id="r_a6dee6495476593b1132a1420a4a56e15"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a6dee6495476593b1132a1420a4a56e15">RemoveSpecialization</a> (const char *v)=0</td></tr>
+<tr class="memdesc:a6dee6495476593b1132a1420a4a56e15"><td class="mdescLeft">&#160;</td><td class="mdescRight">by name  <br /></td></tr>
 <tr class="memitem:a6af53820ff05f2fae71cf145d8de425b" id="r_a6af53820ff05f2fae71cf145d8de425b"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a6af53820ff05f2fae71cf145d8de425b">RemoveSpecializationAt</a> (int index)=0</td></tr>
 <tr class="memdesc:a6af53820ff05f2fae71cf145d8de425b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove at index.  <br /></td></tr>
 <tr class="memitem:ad93762e13f16e140f61398f7f6f5a6e3" id="r_ad93762e13f16e140f61398f7f6f5a6e3"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ad93762e13f16e140f61398f7f6f5a6e3">ClearSpecializations</a> ()=0</td></tr>
@@ -602,6 +729,8 @@ Tab: Proficiencies (Weapon)</h2></td></tr>
 <tr class="memdesc:a7c1019547f79bd365aa9fdca56b2057c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Armor proficiency at index.  <br /></td></tr>
 <tr class="memitem:af1f5ef22ed512a2e6ed53b1d1f41abee" id="r_af1f5ef22ed512a2e6ed53b1d1f41abee"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#af1f5ef22ed512a2e6ed53b1d1f41abee">AddArmorProficiency</a> (const char *v)=0</td></tr>
 <tr class="memdesc:af1f5ef22ed512a2e6ed53b1d1f41abee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append an armor proficiency.  <br /></td></tr>
+<tr class="memitem:abcfe278cd54f62b286e0b5e8f66aa3b8" id="r_abcfe278cd54f62b286e0b5e8f66aa3b8"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#abcfe278cd54f62b286e0b5e8f66aa3b8">RemoveArmorProficiency</a> (const char *v)=0</td></tr>
+<tr class="memdesc:abcfe278cd54f62b286e0b5e8f66aa3b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">by name  <br /></td></tr>
 <tr class="memitem:ae695f82e24c99bc32b0b61576b48268e" id="r_ae695f82e24c99bc32b0b61576b48268e"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#ae695f82e24c99bc32b0b61576b48268e">RemoveArmorProficiencyAt</a> (int index)=0</td></tr>
 <tr class="memdesc:ae695f82e24c99bc32b0b61576b48268e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove at index.  <br /></td></tr>
 <tr class="memitem:a8f8f4c1318feae04d01a9f43d945e479" id="r_a8f8f4c1318feae04d01a9f43d945e479"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a8f8f4c1318feae04d01a9f43d945e479">ClearArmorProficiency</a> ()=0</td></tr>
@@ -635,37 +764,17 @@ Tab: Proficiencies (Weapon)</h2></td></tr>
 <tr class="memitem:af3a8a459bb71c58697deb3d188415542" id="r_af3a8a459bb71c58697deb3d188415542"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#af3a8a459bb71c58697deb3d188415542">SetMissileFocusFromKit</a> (const char *v)=0</td></tr>
 <tr class="memdesc:af3a8a459bb71c58697deb3d188415542"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the missile-focus weapon.  <br /></td></tr>
 <tr class="memitem:a7a51786e5a5cc6e54367238ea2665d5c" id="r_a7a51786e5a5cc6e54367238ea2665d5c"><td class="memItemLeft">virtual long&#160;</td><td class="memItemRight"><a class="el" href="#a7a51786e5a5cc6e54367238ea2665d5c">GetFightingStyle</a> (int slot) const =0</td></tr>
-<tr class="memdesc:a7a51786e5a5cc6e54367238ea2665d5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fighting-style value at slot. Per S&amp;P style table.  <br /></td></tr>
-<tr class="memitem:ac3472dd7bfd510c5009625f31c45fe9f" id="r_ac3472dd7bfd510c5009625f31c45fe9f"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#ac3472dd7bfd510c5009625f31c45fe9f">SetFightingStyle</a> (int slot, long v)=0</td></tr>
-<tr class="memdesc:ac3472dd7bfd510c5009625f31c45fe9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set fighting-style value at slot.  <br /></td></tr>
-<tr class="memitem:a0bde23116b24380d9ec58b287dce9467" id="r_a0bde23116b24380d9ec58b287dce9467"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a0bde23116b24380d9ec58b287dce9467">IsShieldBuckler</a> () const =0</td></tr>
-<tr class="memdesc:a0bde23116b24380d9ec58b287dce9467"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shield-Buckler proficiency.  <br /></td></tr>
-<tr class="memitem:aa1f148eaee732dc8fb439f345cba9cc3" id="r_aa1f148eaee732dc8fb439f345cba9cc3"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#aa1f148eaee732dc8fb439f345cba9cc3">IsShieldSmall</a> () const =0</td></tr>
-<tr class="memdesc:aa1f148eaee732dc8fb439f345cba9cc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shield-Small proficiency.  <br /></td></tr>
-<tr class="memitem:ac6700024225cd6683d154ba57fcf15ac" id="r_ac6700024225cd6683d154ba57fcf15ac"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#ac6700024225cd6683d154ba57fcf15ac">IsShieldMedium</a> () const =0</td></tr>
-<tr class="memdesc:ac6700024225cd6683d154ba57fcf15ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shield-Medium proficiency.  <br /></td></tr>
-<tr class="memitem:ae55cc2247f12495cddf6e3acb42f1e10" id="r_ae55cc2247f12495cddf6e3acb42f1e10"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#ae55cc2247f12495cddf6e3acb42f1e10">IsShieldBody</a> () const =0</td></tr>
-<tr class="memdesc:ae55cc2247f12495cddf6e3acb42f1e10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shield-Body proficiency.  <br /></td></tr>
-<tr class="memitem:aba422d6d8de28bf63365290cf5c7915b" id="r_aba422d6d8de28bf63365290cf5c7915b"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aba422d6d8de28bf63365290cf5c7915b">IsShieldBuckler</a> (bool v)=0</td></tr>
-<tr class="memdesc:aba422d6d8de28bf63365290cf5c7915b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Shield-Buckler proficiency.  <br /></td></tr>
-<tr class="memitem:a8b2e8eb23d25ce0b60a5de31c5d8adf6" id="r_a8b2e8eb23d25ce0b60a5de31c5d8adf6"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a8b2e8eb23d25ce0b60a5de31c5d8adf6">IsShieldSmall</a> (bool v)=0</td></tr>
-<tr class="memdesc:a8b2e8eb23d25ce0b60a5de31c5d8adf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Shield-Small proficiency.  <br /></td></tr>
-<tr class="memitem:a65fdef66e0bb23e205a8f861b9230f14" id="r_a65fdef66e0bb23e205a8f861b9230f14"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a65fdef66e0bb23e205a8f861b9230f14">IsShieldMedium</a> (bool v)=0</td></tr>
-<tr class="memdesc:a65fdef66e0bb23e205a8f861b9230f14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Shield-Medium proficiency.  <br /></td></tr>
-<tr class="memitem:aa77af4a8139b50e8f00099eaa821ae92" id="r_aa77af4a8139b50e8f00099eaa821ae92"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aa77af4a8139b50e8f00099eaa821ae92">IsShieldBody</a> (bool v)=0</td></tr>
-<tr class="memdesc:aa77af4a8139b50e8f00099eaa821ae92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Shield-Body proficiency.  <br /></td></tr>
-<tr class="memitem:a4471a4d2a109eed1dec1021925b99fbf" id="r_a4471a4d2a109eed1dec1021925b99fbf"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a4471a4d2a109eed1dec1021925b99fbf">IsCanPunch</a> () const =0</td></tr>
-<tr class="memdesc:a4471a4d2a109eed1dec1021925b99fbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unarmed combat: punching.  <br /></td></tr>
-<tr class="memitem:a09172e1de607742784af6823fc1f5508" id="r_a09172e1de607742784af6823fc1f5508"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a09172e1de607742784af6823fc1f5508">IsCanWrestle</a> () const =0</td></tr>
-<tr class="memdesc:a09172e1de607742784af6823fc1f5508"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unarmed combat: wrestling.  <br /></td></tr>
-<tr class="memitem:aa6bf94dd45f5062562a0656130701ada" id="r_aa6bf94dd45f5062562a0656130701ada"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#aa6bf94dd45f5062562a0656130701ada">IsCanMartialArts</a> () const =0</td></tr>
-<tr class="memdesc:aa6bf94dd45f5062562a0656130701ada"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unarmed combat: martial arts.  <br /></td></tr>
-<tr class="memitem:a2205bd6c93efe0a6afe5f71e78e36959" id="r_a2205bd6c93efe0a6afe5f71e78e36959"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a2205bd6c93efe0a6afe5f71e78e36959">IsCanPunch</a> (bool v)=0</td></tr>
-<tr class="memdesc:a2205bd6c93efe0a6afe5f71e78e36959"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set punching ability.  <br /></td></tr>
-<tr class="memitem:ab13b547eedfac8d1c1fe64ba224063f0" id="r_ab13b547eedfac8d1c1fe64ba224063f0"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ab13b547eedfac8d1c1fe64ba224063f0">IsCanWrestle</a> (bool v)=0</td></tr>
-<tr class="memdesc:ab13b547eedfac8d1c1fe64ba224063f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set wrestling ability.  <br /></td></tr>
-<tr class="memitem:af5dd472235e5590e02aad072d21ab407" id="r_af5dd472235e5590e02aad072d21ab407"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#af5dd472235e5590e02aad072d21ab407">IsCanMartialArts</a> (bool v)=0</td></tr>
-<tr class="memdesc:af5dd472235e5590e02aad072d21ab407"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set martial-arts ability.  <br /></td></tr>
+<tr class="memdesc:a7a51786e5a5cc6e54367238ea2665d5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fighting-style value at slot (read-only enumeration; edit via AddFightingStyle / RemoveFightingStyle, which enforce the no-duplicates and compaction rules).  <br /></td></tr>
+<tr class="memitem:a08cb149457639025368e5ab9c4b55520" id="r_a08cb149457639025368e5ab9c4b55520"><td class="memItemLeft">virtual int&#160;</td><td class="memItemRight"><a class="el" href="#a08cb149457639025368e5ab9c4b55520">GetFightingStyleCount</a> () const =0</td></tr>
+<tr class="memdesc:a08cb149457639025368e5ab9c4b55520"><td class="mdescLeft">&#160;</td><td class="mdescRight">Count of styles currently set (the array is compacted, no gaps).  <br /></td></tr>
+<tr class="memitem:a9c8a427d661285653ab2fb114b19ddaf" id="r_a9c8a427d661285653ab2fb114b19ddaf"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a9c8a427d661285653ab2fb114b19ddaf">HasFightingStyle</a> (<a class="el" href="#a79033043f5532ede8577dec69560a72a">FightingStyle</a> key) const =0</td></tr>
+<tr class="memdesc:a9c8a427d661285653ab2fb114b19ddaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if <code class="param">key</code> is already present.  <br /></td></tr>
+<tr class="memitem:ade4ff7c7d2fb307475e502fac9808a06" id="r_ade4ff7c7d2fb307475e502fac9808a06"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#ade4ff7c7d2fb307475e502fac9808a06">AddFightingStyle</a> (<a class="el" href="#a79033043f5532ede8577dec69560a72a">FightingStyle</a> key)=0</td></tr>
+<tr class="memdesc:ade4ff7c7d2fb307475e502fac9808a06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a style in the first free slot.  <br /></td></tr>
+<tr class="memitem:adbb55dd619b0f5ca14f81e8862680f95" id="r_adbb55dd619b0f5ca14f81e8862680f95"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#adbb55dd619b0f5ca14f81e8862680f95">RemoveFightingStyle</a> (<a class="el" href="#a79033043f5532ede8577dec69560a72a">FightingStyle</a> key)=0</td></tr>
+<tr class="memdesc:adbb55dd619b0f5ca14f81e8862680f95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a style and compact the array (shift the rest up).  <br /></td></tr>
+<tr class="memitem:ae94bf034d125945a85344242e384cdee" id="r_ae94bf034d125945a85344242e384cdee"><td class="memItemLeft">static const char *&#160;</td><td class="memItemRight"><a class="el" href="#ae94bf034d125945a85344242e384cdee">FightingStyleName</a> (long key)</td></tr>
+<tr class="memdesc:ae94bf034d125945a85344242e384cdee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display name for a fighting-style key, or nullptr if <code class="param">key</code> is not one of the nine styles (0/None or an unknown value).  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-member-group" class="groupheader"><a id="member-group" name="member-group"></a>
 Tab: Inventory</h2></td></tr>
@@ -747,6 +856,8 @@ Tab: Spells</h2></td></tr>
 <tr class="memdesc:ac7d3187d1708863d71f27aea8cf30387"><td class="mdescLeft">&#160;</td><td class="mdescRight">Known wizard spell at index.  <br /></td></tr>
 <tr class="memitem:a5b518254839c506eddef487b4b9c4438" id="r_a5b518254839c506eddef487b4b9c4438"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a5b518254839c506eddef487b4b9c4438">AddKnownWizardSpell</a> (const char *v)=0</td></tr>
 <tr class="memdesc:a5b518254839c506eddef487b4b9c4438"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a wizard spell to the spell book.  <br /></td></tr>
+<tr class="memitem:a0627079c1216aef1338e70c0b31a6356" id="r_a0627079c1216aef1338e70c0b31a6356"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a0627079c1216aef1338e70c0b31a6356">RemoveKnownWizardSpell</a> (const char *v)=0</td></tr>
+<tr class="memdesc:a0627079c1216aef1338e70c0b31a6356"><td class="mdescLeft">&#160;</td><td class="mdescRight">by name  <br /></td></tr>
 <tr class="memitem:aef667b2c10abbcfb01efa2f3f2a6eb11" id="r_aef667b2c10abbcfb01efa2f3f2a6eb11"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#aef667b2c10abbcfb01efa2f3f2a6eb11">RemoveKnownWizardSpellAt</a> (int index)=0</td></tr>
 <tr class="memdesc:aef667b2c10abbcfb01efa2f3f2a6eb11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the wizard spell at index from the spell book.  <br /></td></tr>
 <tr class="memitem:a0f3c262491e4f5ede8cf0012cd2b4c57" id="r_a0f3c262491e4f5ede8cf0012cd2b4c57"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a0f3c262491e4f5ede8cf0012cd2b4c57">ClearKnownWizardSpells</a> ()=0</td></tr>
@@ -757,6 +868,8 @@ Tab: Spells</h2></td></tr>
 <tr class="memdesc:a1b5fc7fabc63dc34a9bc5276320f8738"><td class="mdescLeft">&#160;</td><td class="mdescRight">Known priest spell at index.  <br /></td></tr>
 <tr class="memitem:a5ae974e8fb148e54a3347f25b9c664a0" id="r_a5ae974e8fb148e54a3347f25b9c664a0"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a5ae974e8fb148e54a3347f25b9c664a0">AddKnownPriestSpell</a> (const char *v)=0</td></tr>
 <tr class="memdesc:a5ae974e8fb148e54a3347f25b9c664a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a known priest spell.  <br /></td></tr>
+<tr class="memitem:ad45aa830b3ad10df9b30d32606579658" id="r_ad45aa830b3ad10df9b30d32606579658"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#ad45aa830b3ad10df9b30d32606579658">RemoveKnownPriestSpell</a> (const char *v)=0</td></tr>
+<tr class="memdesc:ad45aa830b3ad10df9b30d32606579658"><td class="mdescLeft">&#160;</td><td class="mdescRight">by name  <br /></td></tr>
 <tr class="memitem:ae4384d7936df42525cec5219c7a3385d" id="r_ae4384d7936df42525cec5219c7a3385d"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#ae4384d7936df42525cec5219c7a3385d">RemoveKnownPriestSpellAt</a> (int index)=0</td></tr>
 <tr class="memdesc:ae4384d7936df42525cec5219c7a3385d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove known priest spell at index.  <br /></td></tr>
 <tr class="memitem:a54459db9ab8d1ddfecee665a9058dc3c" id="r_a54459db9ab8d1ddfecee665a9058dc3c"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a54459db9ab8d1ddfecee665a9058dc3c">ClearKnownPriestSpells</a> ()=0</td></tr>
@@ -914,6 +1027,64 @@ Tab: Spells</h2></td></tr>
 
 </div>
 </div>
+<a id="a02a7411465ed69526dc9df7edf885946" name="a02a7411465ed69526dc9df7edf885946"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02a7411465ed69526dc9df7edf885946">&#9670;&#160;</a></span>AddClassResult</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a02a7411465ed69526dc9df7edf885946">CoreRules::ICharacterRecord::AddClassResult</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Outcome of AddClass. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a02a7411465ed69526dc9df7edf885946a95dc30a2e6ffd46c953a44ade26795eb" name="a02a7411465ed69526dc9df7edf885946a95dc30a2e6ffd46c953a44ade26795eb"></a>Added&#160;</td><td class="fielddoc"><p>New class inserted (in group order). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a02a7411465ed69526dc9df7edf885946ac5ef9334859172f57b64a79050f5d92d" name="a02a7411465ed69526dc9df7edf885946ac5ef9334859172f57b64a79050f5d92d"></a>ReplacedSameGroup&#160;</td><td class="fielddoc"><p>A <em>different</em> class of the same group was present; that slot was renamed and its class-specific lists (abilities/schools/spheres) reset to the new class's defaults. </p>
+<p>XP/HP and memorized spells are kept. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a02a7411465ed69526dc9df7edf885946afed0f3a868115213acd2c295c996eee3" name="a02a7411465ed69526dc9df7edf885946afed0f3a868115213acd2c295c996eee3"></a>AlreadyPresent&#160;</td><td class="fielddoc"><p>That exact class already occupies a slot &ndash; nothing to do (rejected, no change). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a02a7411465ed69526dc9df7edf885946ad34800f0434c0dfd4d90f5ecb03d41b6" name="a02a7411465ed69526dc9df7edf885946ad34800f0434c0dfd4d90f5ecb03d41b6"></a>NotAClass&#160;</td><td class="fielddoc"><p>Name isn't a class in the loaded catalog. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a02a7411465ed69526dc9df7edf885946addc82e7fae350691a86ad7bcb20ded88" name="a02a7411465ed69526dc9df7edf885946addc82e7fae350691a86ad7bcb20ded88"></a>Full&#160;</td><td class="fielddoc"><p>All kMaxClasses slots already in use. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a79033043f5532ede8577dec69560a72a" name="a79033043f5532ede8577dec69560a72a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79033043f5532ede8577dec69560a72a">&#9670;&#160;</a></span>FightingStyle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a79033043f5532ede8577dec69560a72a">CoreRules::ICharacterRecord::FightingStyle</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Skills &amp; Powers fighting-style keys. </p>
+<p>The value stored in each m_fighting_styles slot is one of these. Slots are filled in add-order and kept compacted, so a slot index carries no meaning &mdash; the VALUE identifies the style. (0x7D0 is unassigned.) </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a79033043f5532ede8577dec69560a72aa16a59d75ea706c64aabd1b09fd4e7e56" name="a79033043f5532ede8577dec69560a72aa16a59d75ea706c64aabd1b09fd4e7e56"></a>FStyle_None&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a79033043f5532ede8577dec69560a72aa3aaa2383bbbba3fee13672ec5089f3c6" name="a79033043f5532ede8577dec69560a72aa3aaa2383bbbba3fee13672ec5089f3c6"></a>FStyle_OneHandedWeapon&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a79033043f5532ede8577dec69560a72aa2e994211298ac1d3840a7bbdd46d80a4" name="a79033043f5532ede8577dec69560a72aa2e994211298ac1d3840a7bbdd46d80a4"></a>FStyle_WeaponAndShield&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a79033043f5532ede8577dec69560a72aa9d8f5743613e637ae79a911075b12dfb" name="a79033043f5532ede8577dec69560a72aa9d8f5743613e637ae79a911075b12dfb"></a>FStyle_TwoHandedWeapon&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a79033043f5532ede8577dec69560a72aa3265d5579a7dc2f555a44844e8696d89" name="a79033043f5532ede8577dec69560a72aa3265d5579a7dc2f555a44844e8696d89"></a>FStyle_TwoWeapon&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a79033043f5532ede8577dec69560a72aa4a738af3da25029a8053e1a2c1115c72" name="a79033043f5532ede8577dec69560a72aa4a738af3da25029a8053e1a2c1115c72"></a>FStyle_Missile&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a79033043f5532ede8577dec69560a72aa86fd45edc95a03c2c033bd283f7e618d" name="a79033043f5532ede8577dec69560a72aa86fd45edc95a03c2c033bd283f7e618d"></a>FStyle_HorseArcher&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a79033043f5532ede8577dec69560a72aaf2bb13660b63fbeb88b311477025d19f" name="a79033043f5532ede8577dec69560a72aaf2bb13660b63fbeb88b311477025d19f"></a>FStyle_ThrownSling&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a79033043f5532ede8577dec69560a72aa4395014d79462d8908fc05c3e958e4d4" name="a79033043f5532ede8577dec69560a72aa4395014d79462d8908fc05c3e958e4d4"></a>FStyle_TwoWeaponPlus2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a79033043f5532ede8577dec69560a72aa55d14a5e3a23baf6aaec76f1786221be" name="a79033043f5532ede8577dec69560a72aa55d14a5e3a23baf6aaec76f1786221be"></a>FStyle_OneHandedPlus2&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
 <a id="a2b7657c7bd4c87a4b10fcd3962b41006" name="a2b7657c7bd4c87a4b10fcd3962b41006"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2b7657c7bd4c87a4b10fcd3962b41006">&#9670;&#160;</a></span>InventorySlot</h2>
 
@@ -969,6 +1140,30 @@ Tab: Spells</h2></td></tr>
 <tr><td class="fieldname"><a id="ac9b435d93e24ac5d188e3ac1ebaa6d99adb77765b596554bbdc68819ec7319155" name="ac9b435d93e24ac5d188e3ac1ebaa6d99adb77765b596554bbdc68819ec7319155"></a>Player_SkillsAndPowers&#160;</td><td class="fielddoc"><p>Player's Option: Skills &amp; Powers. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ac9b435d93e24ac5d188e3ac1ebaa6d99a72dd3675bf4348b83fd7f8c9e0be9cff" name="ac9b435d93e24ac5d188e3ac1ebaa6d99a72dd3675bf4348b83fd7f8c9e0be9cff"></a>Player_CoreRulesV3&#160;</td><td class="fielddoc"><p>Core Rules v3 (later supplement). </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a661dd7114e453c450458b2e7abcf7f4a" name="a661dd7114e453c450458b2e7abcf7f4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a661dd7114e453c450458b2e7abcf7f4a">&#9670;&#160;</a></span>RemoveClassResult</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a661dd7114e453c450458b2e7abcf7f4a">CoreRules::ICharacterRecord::RemoveClassResult</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Outcome of RemoveClass. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a661dd7114e453c450458b2e7abcf7f4aa849da5e9c565faceb74412e90daf0ab0" name="a661dd7114e453c450458b2e7abcf7f4aa849da5e9c565faceb74412e90daf0ab0"></a>Removed&#160;</td><td class="fielddoc"><p>Class removed; roster compacted. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a661dd7114e453c450458b2e7abcf7f4aa813384b2cb8b066fad31e3d694ebca0e" name="a661dd7114e453c450458b2e7abcf7f4aa813384b2cb8b066fad31e3d694ebca0e"></a>NotFound&#160;</td><td class="fielddoc"><p>No slot holds that class name. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a661dd7114e453c450458b2e7abcf7f4aa80e1f6cc3d411014d54eb255f3057e75" name="a661dd7114e453c450458b2e7abcf7f4aa80e1f6cc3d411014d54eb255f3057e75"></a>CannotRemoveLast&#160;</td><td class="fielddoc"><p>Refused &ndash; a character must keep &gt;= 1 class. </p>
 </td></tr>
 </table>
 
@@ -1109,6 +1304,63 @@ Tab: Spells</h2></td></tr>
 
 </div>
 </div>
+<a id="a3bf2a1a7a81fca29cab90359c047c668" name="a3bf2a1a7a81fca29cab90359c047c668"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bf2a1a7a81fca29cab90359c047c668">&#9670;&#160;</a></span>AddClass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="#a02a7411465ed69526dc9df7edf885946">AddClassResult</a> CoreRules::ICharacterRecord::AddClass </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add a class by name. </p>
+<p>Classes are group-ordered and one-per-group: a class whose group is already present replaces that slot in place (keeping XP/HP, swapping the class-ability set); otherwise the new class is inserted in group order with a clean slot (XP 0, HP 0) and its abilities populated. Maintains the count and shifts every per-slot array in lockstep. </p>
+
+</div>
+</div>
+<a id="ad442f6aae770b7696685907e48193789" name="ad442f6aae770b7696685907e48193789"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad442f6aae770b7696685907e48193789">&#9670;&#160;</a></span>AddClassAbility()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CoreRules::ICharacterRecord::AddClassAbility </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>slot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a36fe264f73d0f0009b260fee1cebc5f1" name="a36fe264f73d0f0009b260fee1cebc5f1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a36fe264f73d0f0009b260fee1cebc5f1">&#9670;&#160;</a></span>AddDisadvantage()</h2>
 
@@ -1133,6 +1385,34 @@ Tab: Spells</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Append a disadvantage to the General-tab Disadvantages pane. </p>
+
+</div>
+</div>
+<a id="ade4ff7c7d2fb307475e502fac9808a06" name="ade4ff7c7d2fb307475e502fac9808a06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade4ff7c7d2fb307475e502fac9808a06">&#9670;&#160;</a></span>AddFightingStyle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CoreRules::ICharacterRecord::AddFightingStyle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a79033043f5532ede8577dec69560a72a">FightingStyle</a></td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add a style in the first free slot. </p>
+<p>Rejects an invalid key, a duplicate (each style may appear only once), or a full array. </p>
 
 </div>
 </div>
@@ -1217,6 +1497,64 @@ Tab: Spells</h2></td></tr>
 
 </div>
 </div>
+<a id="a9d6cb2967fe186d3efa896652d05458c" name="a9d6cb2967fe186d3efa896652d05458c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d6cb2967fe186d3efa896652d05458c">&#9670;&#160;</a></span>AddMagicSchool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CoreRules::ICharacterRecord::AddMagicSchool </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>slot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6efa0e39a3541d894204fb7c09a684c8" name="a6efa0e39a3541d894204fb7c09a684c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6efa0e39a3541d894204fb7c09a684c8">&#9670;&#160;</a></span>AddMajorSphere()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CoreRules::ICharacterRecord::AddMajorSphere </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>slot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a63745b8a1b058db8af1c4660cabe5b04" name="a63745b8a1b058db8af1c4660cabe5b04"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a63745b8a1b058db8af1c4660cabe5b04">&#9670;&#160;</a></span>AddMemorizedPriestSpell()</h2>
 
@@ -1286,6 +1624,35 @@ Tab: Spells</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Append a memorized wizard spell to <span class="tt">(slot, level)</span>. </p>
+
+</div>
+</div>
+<a id="a59d54bbd6c2f51bb5d29e975479b13d2" name="a59d54bbd6c2f51bb5d29e975479b13d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59d54bbd6c2f51bb5d29e975479b13d2">&#9670;&#160;</a></span>AddMinorSphere()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CoreRules::ICharacterRecord::AddMinorSphere </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>slot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -1641,6 +2008,31 @@ Tab: Spells</h2></td></tr>
 
 </div>
 </div>
+<a id="a8351168abc89149962daae4ab13421e0" name="a8351168abc89149962daae4ab13421e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8351168abc89149962daae4ab13421e0">&#9670;&#160;</a></span>ClearClassAbilities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void CoreRules::ICharacterRecord::ClearClassAbilities </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>slot</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a38364ba90161b0fd344b0f0ed1a20819" name="a38364ba90161b0fd344b0f0ed1a20819"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a38364ba90161b0fd344b0f0ed1a20819">&#9670;&#160;</a></span>ClearDisadvantages()</h2>
 
@@ -1776,6 +2168,56 @@ Tab: Spells</h2></td></tr>
 
 </div>
 </div>
+<a id="aa5a6abecf850a81f24d8c822a76a5153" name="aa5a6abecf850a81f24d8c822a76a5153"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5a6abecf850a81f24d8c822a76a5153">&#9670;&#160;</a></span>ClearMagicSchools()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void CoreRules::ICharacterRecord::ClearMagicSchools </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>slot</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a951f2ae939aa944fc1a33818effd93aa" name="a951f2ae939aa944fc1a33818effd93aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a951f2ae939aa944fc1a33818effd93aa">&#9670;&#160;</a></span>ClearMajorSpheres()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void CoreRules::ICharacterRecord::ClearMajorSpheres </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>slot</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a4b9bab0a89a9e295ecb88be06bcea59c" name="a4b9bab0a89a9e295ecb88be06bcea59c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4b9bab0a89a9e295ecb88be06bcea59c">&#9670;&#160;</a></span>ClearMemorizedPriestSpells()</h2>
 
@@ -1835,6 +2277,31 @@ Tab: Spells</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Clear all memorized wizard spells in <span class="tt">(slot, level)</span>. </p>
+
+</div>
+</div>
+<a id="af7b7ed9b440196b32ac0b3927a6af8b7" name="af7b7ed9b440196b32ac0b3927a6af8b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7b7ed9b440196b32ac0b3927a6af8b7">&#9670;&#160;</a></span>ClearMinorSpheres()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void CoreRules::ICharacterRecord::ClearMinorSpheres </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>slot</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -2078,6 +2545,62 @@ Tab: Spells</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Remove every weapon proficiency. </p>
+
+</div>
+</div>
+<a id="ae94bf034d125945a85344242e384cdee" name="ae94bf034d125945a85344242e384cdee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae94bf034d125945a85344242e384cdee">&#9670;&#160;</a></span>FightingStyleName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * CoreRules::ICharacterRecord::FightingStyleName </td>
+          <td>(</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Display name for a fighting-style key, or nullptr if <code class="param">key</code> is not one of the nine styles (0/None or an unknown value). </p>
+<p>The single source of truth for the key-to-name mapping. </p>
+
+</div>
+</div>
+<a id="a0bf6ea7af3b5e47e23a33beedd93a2bd" name="a0bf6ea7af3b5e47e23a33beedd93a2bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bf6ea7af3b5e47e23a33beedd93a2bd">&#9670;&#160;</a></span>FindClassSlot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int CoreRules::ICharacterRecord::FindClassSlot </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>class_name</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Slot index holding the named class (case-insensitive), or -1 if the character has no such class. </p>
+<p>The inverse of GetSlotClassName &ndash; saves the caller a lookup loop before the per-slot accessors. </p>
 
 </div>
 </div>
@@ -2487,6 +3010,56 @@ Tab: Spells</h2></td></tr>
 
 </div>
 </div>
+<a id="aa65e68f24d3941c93ab8e707f5b39b73" name="aa65e68f24d3941c93ab8e707f5b39b73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa65e68f24d3941c93ab8e707f5b39b73">&#9670;&#160;</a></span>GetCharacterPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual long CoreRules::ICharacterRecord::GetCharacterPoints </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6db0696bb8895ccda4791973bed6f135" name="a6db0696bb8895ccda4791973bed6f135"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6db0696bb8895ccda4791973bed6f135">&#9670;&#160;</a></span>GetCharacterPointsPerLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual long CoreRules::ICharacterRecord::GetCharacterPointsPerLevel </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ae1b023747d548a3e54156b2be86ef1da" name="ae1b023747d548a3e54156b2be86ef1da"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae1b023747d548a3e54156b2be86ef1da">&#9670;&#160;</a></span>GetCharisma()</h2>
 
@@ -2539,6 +3112,60 @@ Tab: Spells</h2></td></tr>
 
 <p>Derived Charisma stats (CR: off Charisma; S&amp;P: Leadership + Appearance). </p>
 <p>By value. </p>
+
+</div>
+</div>
+<a id="a94b114e73221cd3a730111aab24e6ac5" name="a94b114e73221cd3a730111aab24e6ac5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94b114e73221cd3a730111aab24e6ac5">&#9670;&#160;</a></span>GetClassAbility()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const char * CoreRules::ICharacterRecord::GetClassAbility </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>slot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aced6ba3a0d5b1e5af47dd290ad28e6dd" name="aced6ba3a0d5b1e5af47dd290ad28e6dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aced6ba3a0d5b1e5af47dd290ad28e6dd">&#9670;&#160;</a></span>GetClassAbilityCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int CoreRules::ICharacterRecord::GetClassAbilityCount </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>slot</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -3053,7 +3680,35 @@ Tab: Spells</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Fighting-style value at slot. Per S&amp;P style table. </p>
+<p>Fighting-style value at slot (read-only enumeration; edit via AddFightingStyle / RemoveFightingStyle, which enforce the no-duplicates and compaction rules). </p>
+<p>Per S&amp;P style table. </p>
+
+</div>
+</div>
+<a id="a08cb149457639025368e5ab9c4b55520" name="a08cb149457639025368e5ab9c4b55520"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08cb149457639025368e5ab9c4b55520">&#9670;&#160;</a></span>GetFightingStyleCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int CoreRules::ICharacterRecord::GetFightingStyleCount </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Count of styles currently set (the array is compacted, no gaps). </p>
 
 </div>
 </div>
@@ -4178,6 +4833,60 @@ Tab: Spells</h2></td></tr>
 
 </div>
 </div>
+<a id="abedf8b631c05a0e2241e5b47537f82dc" name="abedf8b631c05a0e2241e5b47537f82dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abedf8b631c05a0e2241e5b47537f82dc">&#9670;&#160;</a></span>GetMagicSchool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const char * CoreRules::ICharacterRecord::GetMagicSchool </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>slot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1adef540d78ccfaf53439b2708730c3d" name="a1adef540d78ccfaf53439b2708730c3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1adef540d78ccfaf53439b2708730c3d">&#9670;&#160;</a></span>GetMagicSchoolCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int CoreRules::ICharacterRecord::GetMagicSchoolCount </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>slot</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ad5a9731bf8a5fec39a041ff105aafdfe" name="ad5a9731bf8a5fec39a041ff105aafdfe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad5a9731bf8a5fec39a041ff105aafdfe">&#9670;&#160;</a></span>GetMajorLifeEvent()</h2>
 
@@ -4202,6 +4911,60 @@ Tab: Spells</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Major Life Event prose field. </p>
+
+</div>
+</div>
+<a id="a5d6cce02379c01adf2398ebdbd613ad0" name="a5d6cce02379c01adf2398ebdbd613ad0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d6cce02379c01adf2398ebdbd613ad0">&#9670;&#160;</a></span>GetMajorSphere()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const char * CoreRules::ICharacterRecord::GetMajorSphere </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>slot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac84c039cf701b82ecbab4643291bb06d" name="ac84c039cf701b82ecbab4643291bb06d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac84c039cf701b82ecbab4643291bb06d">&#9670;&#160;</a></span>GetMajorSphereCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int CoreRules::ICharacterRecord::GetMajorSphereCount </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>slot</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -4343,6 +5106,60 @@ Tab: Spells</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="abf16de15cb99cf69d21004919dbaa295" name="abf16de15cb99cf69d21004919dbaa295"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf16de15cb99cf69d21004919dbaa295">&#9670;&#160;</a></span>GetMinorSphere()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const char * CoreRules::ICharacterRecord::GetMinorSphere </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>slot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a73ce56b952cf53cc02d31eec53f8dfcc" name="a73ce56b952cf53cc02d31eec53f8dfcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73ce56b952cf53cc02d31eec53f8dfcc">&#9670;&#160;</a></span>GetMinorSphereCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int CoreRules::ICharacterRecord::GetMinorSphereCount </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>slot</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -4532,7 +5349,8 @@ Tab: Spells</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Active class count (1..3 typical; 0..kMaxClasses). </p>
+<p>Active class count. </p>
+<p>Maintained by AddClass / RemoveClass &ndash; there is no public setter, so the count can't desync from the slots. </p>
 
 </div>
 </div>
@@ -4938,6 +5756,7 @@ Tab: Spells</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Class name at the given slot (<span class="tt">""</span> if out of range). </p>
+<p>Read-only enumeration; use AddClass / RemoveClass to change the roster. </p>
 
 </div>
 </div>
@@ -5590,6 +6409,33 @@ Tab: Spells</h2></td></tr>
 </div><div class="memdoc">
 
 <p><span class="tt">true</span> if <span class="tt"><a class="el" href="#a5d16a0636edf4a37c0ccad430f6d098a" title="Linked family record id; 0 = no family link.">GetFamilyId()</a></span> is non-zero AND the family record exists. </p>
+
+</div>
+</div>
+<a id="a9c8a427d661285653ab2fb114b19ddaf" name="a9c8a427d661285653ab2fb114b19ddaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c8a427d661285653ab2fb114b19ddaf">&#9670;&#160;</a></span>HasFightingStyle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CoreRules::ICharacterRecord::HasFightingStyle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a79033043f5532ede8577dec69560a72a">FightingStyle</a></td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>True if <code class="param">key</code> is already present. </p>
 
 </div>
 </div>
@@ -6431,6 +7277,33 @@ Tab: Spells</h2></td></tr>
 
 </div>
 </div>
+<a id="abcfe278cd54f62b286e0b5e8f66aa3b8" name="abcfe278cd54f62b286e0b5e8f66aa3b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcfe278cd54f62b286e0b5e8f66aa3b8">&#9670;&#160;</a></span>RemoveArmorProficiency()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CoreRules::ICharacterRecord::RemoveArmorProficiency </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>by name </p>
+
+</div>
+</div>
 <a id="ae695f82e24c99bc32b0b61576b48268e" name="ae695f82e24c99bc32b0b61576b48268e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae695f82e24c99bc32b0b61576b48268e">&#9670;&#160;</a></span>RemoveArmorProficiencyAt()</h2>
 
@@ -6455,6 +7328,33 @@ Tab: Spells</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Remove at index. </p>
+
+</div>
+</div>
+<a id="a2e756188eb7e1400e8ae592925f2ecfd" name="a2e756188eb7e1400e8ae592925f2ecfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e756188eb7e1400e8ae592925f2ecfd">&#9670;&#160;</a></span>RemoveArmorWorn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CoreRules::ICharacterRecord::RemoveArmorWorn </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>by name </p>
 
 </div>
 </div>
@@ -6485,6 +7385,33 @@ Tab: Spells</h2></td></tr>
 
 </div>
 </div>
+<a id="a55b8dcd0d62f9886a32d0e2658cd4f6e" name="a55b8dcd0d62f9886a32d0e2658cd4f6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55b8dcd0d62f9886a32d0e2658cd4f6e">&#9670;&#160;</a></span>RemoveBroadGroupProficiency()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CoreRules::ICharacterRecord::RemoveBroadGroupProficiency </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>by name </p>
+
+</div>
+</div>
 <a id="ae1c6071256b51a2c889777a446a71f92" name="ae1c6071256b51a2c889777a446a71f92"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae1c6071256b51a2c889777a446a71f92">&#9670;&#160;</a></span>RemoveBroadGroupProficiencyAt()</h2>
 
@@ -6509,6 +7436,123 @@ Tab: Spells</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Remove at index. </p>
+
+</div>
+</div>
+<a id="a1feb316bf282849c6204b063243a26d8" name="a1feb316bf282849c6204b063243a26d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1feb316bf282849c6204b063243a26d8">&#9670;&#160;</a></span>RemoveClass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="#a661dd7114e453c450458b2e7abcf7f4a">RemoveClassResult</a> CoreRules::ICharacterRecord::RemoveClass </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove a class by name; compacts the roster (and every per-slot array) and decrements the count. </p>
+<p>Won't remove the last class. </p>
+
+</div>
+</div>
+<a id="ae03fc94f6772797d897edb0c4c9d5585" name="ae03fc94f6772797d897edb0c4c9d5585"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae03fc94f6772797d897edb0c4c9d5585">&#9670;&#160;</a></span>RemoveClassAbility()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CoreRules::ICharacterRecord::RemoveClassAbility </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>slot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>by name (removes all matches); false if none </p>
+
+</div>
+</div>
+<a id="abe14b039befe818ee17c3013e1ce7c16" name="abe14b039befe818ee17c3013e1ce7c16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe14b039befe818ee17c3013e1ce7c16">&#9670;&#160;</a></span>RemoveClassAbilityAt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CoreRules::ICharacterRecord::RemoveClassAbilityAt </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>slot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>by index </p>
+
+</div>
+</div>
+<a id="a97a6a617bbcd4e20896236a1072c23a3" name="a97a6a617bbcd4e20896236a1072c23a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97a6a617bbcd4e20896236a1072c23a3">&#9670;&#160;</a></span>RemoveDisadvantage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CoreRules::ICharacterRecord::RemoveDisadvantage </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>by name </p>
 
 </div>
 </div>
@@ -6539,6 +7583,60 @@ Tab: Spells</h2></td></tr>
 
 </div>
 </div>
+<a id="adbb55dd619b0f5ca14f81e8862680f95" name="adbb55dd619b0f5ca14f81e8862680f95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbb55dd619b0f5ca14f81e8862680f95">&#9670;&#160;</a></span>RemoveFightingStyle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CoreRules::ICharacterRecord::RemoveFightingStyle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a79033043f5532ede8577dec69560a72a">FightingStyle</a></td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove a style and compact the array (shift the rest up). </p>
+
+</div>
+</div>
+<a id="ad45aa830b3ad10df9b30d32606579658" name="ad45aa830b3ad10df9b30d32606579658"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad45aa830b3ad10df9b30d32606579658">&#9670;&#160;</a></span>RemoveKnownPriestSpell()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CoreRules::ICharacterRecord::RemoveKnownPriestSpell </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>by name </p>
+
+</div>
+</div>
 <a id="ae4384d7936df42525cec5219c7a3385d" name="ae4384d7936df42525cec5219c7a3385d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae4384d7936df42525cec5219c7a3385d">&#9670;&#160;</a></span>RemoveKnownPriestSpellAt()</h2>
 
@@ -6563,6 +7661,33 @@ Tab: Spells</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Remove known priest spell at index. </p>
+
+</div>
+</div>
+<a id="a0627079c1216aef1338e70c0b31a6356" name="a0627079c1216aef1338e70c0b31a6356"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0627079c1216aef1338e70c0b31a6356">&#9670;&#160;</a></span>RemoveKnownWizardSpell()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CoreRules::ICharacterRecord::RemoveKnownWizardSpell </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>by name </p>
 
 </div>
 </div>
@@ -6593,6 +7718,33 @@ Tab: Spells</h2></td></tr>
 
 </div>
 </div>
+<a id="afdaeab3c53dda256f6aa0fdf40e240f7" name="afdaeab3c53dda256f6aa0fdf40e240f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdaeab3c53dda256f6aa0fdf40e240f7">&#9670;&#160;</a></span>RemoveLanguage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CoreRules::ICharacterRecord::RemoveLanguage </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>by name </p>
+
+</div>
+</div>
 <a id="a892c9d1b44d3d43588331feaafd1daeb" name="a892c9d1b44d3d43588331feaafd1daeb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a892c9d1b44d3d43588331feaafd1daeb">&#9670;&#160;</a></span>RemoveLanguageAt()</h2>
 
@@ -6617,6 +7769,130 @@ Tab: Spells</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Remove language at index. </p>
+
+</div>
+</div>
+<a id="a187c5a837f3f2ed724a380c71cf1f265" name="a187c5a837f3f2ed724a380c71cf1f265"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a187c5a837f3f2ed724a380c71cf1f265">&#9670;&#160;</a></span>RemoveMagicSchool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CoreRules::ICharacterRecord::RemoveMagicSchool </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>slot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>by name </p>
+
+</div>
+</div>
+<a id="a514aa01c835d95412e6e61ecc51f6dc8" name="a514aa01c835d95412e6e61ecc51f6dc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a514aa01c835d95412e6e61ecc51f6dc8">&#9670;&#160;</a></span>RemoveMagicSchoolAt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CoreRules::ICharacterRecord::RemoveMagicSchoolAt </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>slot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>by index </p>
+
+</div>
+</div>
+<a id="a6a87713ca63c7d823529c3182c4a1836" name="a6a87713ca63c7d823529c3182c4a1836"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a87713ca63c7d823529c3182c4a1836">&#9670;&#160;</a></span>RemoveMajorSphere()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CoreRules::ICharacterRecord::RemoveMajorSphere </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>slot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>by name </p>
+
+</div>
+</div>
+<a id="a520a536e551137b3df16acac3963f9bd" name="a520a536e551137b3df16acac3963f9bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a520a536e551137b3df16acac3963f9bd">&#9670;&#160;</a></span>RemoveMajorSphereAt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CoreRules::ICharacterRecord::RemoveMajorSphereAt </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>slot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>by index </p>
 
 </div>
 </div>
@@ -6692,6 +7968,95 @@ Tab: Spells</h2></td></tr>
 
 </div>
 </div>
+<a id="a466dd819c1409464762a95dab7031561" name="a466dd819c1409464762a95dab7031561"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a466dd819c1409464762a95dab7031561">&#9670;&#160;</a></span>RemoveMinorSphere()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CoreRules::ICharacterRecord::RemoveMinorSphere </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>slot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>by name </p>
+
+</div>
+</div>
+<a id="aa3e2bbd145ca8fa65d500c23f2083251" name="aa3e2bbd145ca8fa65d500c23f2083251"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3e2bbd145ca8fa65d500c23f2083251">&#9670;&#160;</a></span>RemoveMinorSphereAt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CoreRules::ICharacterRecord::RemoveMinorSphereAt </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>slot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>by index </p>
+
+</div>
+</div>
+<a id="ad41ef31cabe0bedd31f625eed27647a1" name="ad41ef31cabe0bedd31f625eed27647a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad41ef31cabe0bedd31f625eed27647a1">&#9670;&#160;</a></span>RemoveNonWeaponProf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CoreRules::ICharacterRecord::RemoveNonWeaponProf </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>by name </p>
+
+</div>
+</div>
 <a id="a45aaafec7282e4a72adba66b98c395d0" name="a45aaafec7282e4a72adba66b98c395d0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a45aaafec7282e4a72adba66b98c395d0">&#9670;&#160;</a></span>RemoveNonWeaponProfAt()</h2>
 
@@ -6743,6 +8108,33 @@ Tab: Spells</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Remove NWP score at index. </p>
+
+</div>
+</div>
+<a id="aa7bab663d679875d53ef297a308ed901" name="aa7bab663d679875d53ef297a308ed901"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7bab663d679875d53ef297a308ed901">&#9670;&#160;</a></span>RemoveRacialAbility()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CoreRules::ICharacterRecord::RemoveRacialAbility </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>by name </p>
 
 </div>
 </div>
@@ -6800,6 +8192,33 @@ Tab: Spells</h2></td></tr>
 
 </div>
 </div>
+<a id="a25d81bc723737cea8769cb0e4470f900" name="a25d81bc723737cea8769cb0e4470f900"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25d81bc723737cea8769cb0e4470f900">&#9670;&#160;</a></span>RemoveSecondarySkill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CoreRules::ICharacterRecord::RemoveSecondarySkill </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>by name </p>
+
+</div>
+</div>
 <a id="a2aa0c3641424b3704763e217c224782d" name="a2aa0c3641424b3704763e217c224782d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2aa0c3641424b3704763e217c224782d">&#9670;&#160;</a></span>RemoveSecondarySkillAt()</h2>
 
@@ -6824,6 +8243,33 @@ Tab: Spells</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Remove at index. </p>
+
+</div>
+</div>
+<a id="a6dee6495476593b1132a1420a4a56e15" name="a6dee6495476593b1132a1420a4a56e15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dee6495476593b1132a1420a4a56e15">&#9670;&#160;</a></span>RemoveSpecialization()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CoreRules::ICharacterRecord::RemoveSpecialization </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>by name </p>
 
 </div>
 </div>
@@ -6854,6 +8300,33 @@ Tab: Spells</h2></td></tr>
 
 </div>
 </div>
+<a id="a94e8f24c4123b320ea785e756fcc0334" name="a94e8f24c4123b320ea785e756fcc0334"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94e8f24c4123b320ea785e756fcc0334">&#9670;&#160;</a></span>RemoveTightGroupProficiency()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CoreRules::ICharacterRecord::RemoveTightGroupProficiency </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>by name </p>
+
+</div>
+</div>
 <a id="ab46fbc47970b21641d53ba68e9286a45" name="ab46fbc47970b21641d53ba68e9286a45"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab46fbc47970b21641d53ba68e9286a45">&#9670;&#160;</a></span>RemoveTightGroupProficiencyAt()</h2>
 
@@ -6881,6 +8354,33 @@ Tab: Spells</h2></td></tr>
 
 </div>
 </div>
+<a id="a1b9451fecf5a60a128d2ea9c84f34712" name="a1b9451fecf5a60a128d2ea9c84f34712"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b9451fecf5a60a128d2ea9c84f34712">&#9670;&#160;</a></span>RemoveTrait()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CoreRules::ICharacterRecord::RemoveTrait </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>by name </p>
+
+</div>
+</div>
 <a id="a5896d17c674ffbec25515562b1be95ff" name="a5896d17c674ffbec25515562b1be95ff"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5896d17c674ffbec25515562b1be95ff">&#9670;&#160;</a></span>RemoveTraitAt()</h2>
 
@@ -6905,6 +8405,33 @@ Tab: Spells</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Remove trait at index. </p>
+
+</div>
+</div>
+<a id="aeed2174757e09b8611be6d25fac5c05d" name="aeed2174757e09b8611be6d25fac5c05d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeed2174757e09b8611be6d25fac5c05d">&#9670;&#160;</a></span>RemoveWeaponProficiency()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CoreRules::ICharacterRecord::RemoveWeaponProficiency </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>by name </p>
 
 </div>
 </div>
@@ -7134,6 +8661,56 @@ Tab: Spells</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">false</span> if another character in <span class="tt"><a class="el" href="namespace_core_rules.html#a889e99435174a6251968e5387dd04e42">Character_Index</a></span> already has this name (rename is refused; existing name unchanged); <span class="tt">true</span> on success or when <span class="tt">v</span> equals the current name. </dd></dl>
+
+</div>
+</div>
+<a id="a15e486199090944f94b8c161702bc362" name="a15e486199090944f94b8c161702bc362"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15e486199090944f94b8c161702bc362">&#9670;&#160;</a></span>SetCharacterPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CoreRules::ICharacterRecord::SetCharacterPoints </td>
+          <td>(</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9b42fb006eab3fb73af2b37128b5239e" name="a9b42fb006eab3fb73af2b37128b5239e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b42fb006eab3fb73af2b37128b5239e">&#9670;&#160;</a></span>SetCharacterPointsPerLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CoreRules::ICharacterRecord::SetCharacterPointsPerLevel </td>
+          <td>(</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -7494,37 +9071,6 @@ Tab: Spells</h2></td></tr>
 
 <p>Set the family link. </p>
 <p>Clears DOB + place-of-birth when non-zero. </p><dl class="section return"><dt>Returns</dt><dd><span class="tt">false</span> if <span class="tt">id</span> &lt; 0. </dd></dl>
-
-</div>
-</div>
-<a id="ac3472dd7bfd510c5009625f31c45fe9f" name="ac3472dd7bfd510c5009625f31c45fe9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3472dd7bfd510c5009625f31c45fe9f">&#9670;&#160;</a></span>SetFightingStyle()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool CoreRules::ICharacterRecord::SetFightingStyle </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>slot</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set fighting-style value at slot. </p>
 
 </div>
 </div>
@@ -7998,34 +9544,6 @@ Tab: Spells</h2></td></tr>
 
 </div>
 </div>
-<a id="aa9261cd00153c5244bc5a8a69d8e9f90" name="aa9261cd00153c5244bc5a8a69d8e9f90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9261cd00153c5244bc5a8a69d8e9f90">&#9670;&#160;</a></span>SetNumberOfClasses()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool CoreRules::ICharacterRecord::SetNumberOfClasses </td>
-          <td>(</td>
-          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set active class count. </p>
-<dl class="section return"><dt>Returns</dt><dd><span class="tt">false</span> if outside <span class="tt">[0, <a class="el" href="#a1ed17b1b045456b38d42fb9a0abbdb33aa4077fd5aa93e3c6a6539958ef57645a">kMaxClasses</a>]</span>. </dd></dl>
-
-</div>
-</div>
 <a id="a9e49878d6fb8e3a3709fba9da2845cfa" name="a9e49878d6fb8e3a3709fba9da2845cfa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9e49878d6fb8e3a3709fba9da2845cfa">&#9670;&#160;</a></span>SetParty()</h2>
 
@@ -8240,38 +9758,6 @@ Tab: Spells</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set Reason. </p>
-
-</div>
-</div>
-<a id="a732aebb4797d9414042179b50ba857e4" name="a732aebb4797d9414042179b50ba857e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a732aebb4797d9414042179b50ba857e4">&#9670;&#160;</a></span>SetSlotClassName()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool CoreRules::ICharacterRecord::SetSlotClassName </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>slot</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set class name at the given slot. </p>
-<dl class="section return"><dt>Returns</dt><dd><span class="tt">false</span> if <span class="tt">slot</span> invalid. </dd></dl>
 
 </div>
 </div>

@@ -1,7 +1,7 @@
 var dir_c296131aac179166266d177a4107e530 =
 [
     [ "API.h", "_a_p_i_8h.html", "_a_p_i_8h" ],
-    [ "Diagnostics.h", "_diagnostics_8h.html", "_diagnostics_8h" ],
+    [ "Diagnostics.h", "_diagnostics_8h.html", null ],
     [ "IAttackRecord.h", "_i_attack_record_8h.html", "_i_attack_record_8h" ],
     [ "ICalendarEntryOb.h", "_i_calendar_entry_ob_8h.html", "_i_calendar_entry_ob_8h" ],
     [ "ICalendarOb.h", "_i_calendar_ob_8h.html", "_i_calendar_ob_8h" ],

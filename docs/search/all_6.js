@@ -19,6 +19,5 @@ var searchData=
   ['entry_16',['Entry',['../struct_core_rules_1_1_i_export_builder_1_1_entry.html',1,'CoreRules::IExportBuilder::Entry'],['../struct_core_rules_1_1_i_import_reader_1_1_entry.html',1,'CoreRules::IImportReader::Entry']]],
   ['entry_20index_20chr_17',['The roster entry (index.chr)',['../data_character.html#autotoc_md11',1,'']]],
   ['equipment_18',['Equipment',['../namespace_core_rules.html#a5ef16e3cbd231128119dfc03ff70dac7a9ccda2d50a1ee1b73ee1f048eb397aa8',1,'CoreRules::Equipment'],['../namespace_core_rules.html#a3b5098d0ca338548c50b6a83bfbbdbd4a9ccda2d50a1ee1b73ee1f048eb397aa8',1,'CoreRules::Equipment']]],
-  ['expected_5fcount_19',['expected_count',['../struct_core_rules_1_1_probe_result.html#a140d94620fc9019772d77e497d643926',1,'CoreRules::ProbeResult']]],
-  ['exportitemkind_20',['ExportItemKind',['../namespace_core_rules.html#a5ef16e3cbd231128119dfc03ff70dac7',1,'CoreRules']]]
+  ['exportitemkind_19',['ExportItemKind',['../namespace_core_rules.html#a5ef16e3cbd231128119dfc03ff70dac7',1,'CoreRules']]]
 ];

@@ -82,10 +82,6 @@ var annotated_dup =
       [ "ITreasureRecord", "class_core_rules_1_1_i_treasure_record.html", "class_core_rules_1_1_i_treasure_record" ],
       [ "ITreasureSingleTableOb", "class_core_rules_1_1_i_treasure_single_table_ob.html", "class_core_rules_1_1_i_treasure_single_table_ob" ],
       [ "ITreasureTableEntry", "class_core_rules_1_1_i_treasure_table_entry.html", "class_core_rules_1_1_i_treasure_table_entry" ],
-      [ "ITreasureTableRecord", "class_core_rules_1_1_i_treasure_table_record.html", "class_core_rules_1_1_i_treasure_table_record" ],
-      [ "PartsProbeResult", "struct_core_rules_1_1_parts_probe_result.html", "struct_core_rules_1_1_parts_probe_result" ],
-      [ "ProbeResult", "struct_core_rules_1_1_probe_result.html", "struct_core_rules_1_1_probe_result" ],
-      [ "RoundTripResult", "struct_core_rules_1_1_round_trip_result.html", "struct_core_rules_1_1_round_trip_result" ],
-      [ "SpellsProbeResult", "struct_core_rules_1_1_spells_probe_result.html", "struct_core_rules_1_1_spells_probe_result" ]
+      [ "ITreasureTableRecord", "class_core_rules_1_1_i_treasure_table_record.html", "class_core_rules_1_1_i_treasure_table_record" ]
     ] ]
 ];
